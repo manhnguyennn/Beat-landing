@@ -206,6 +206,17 @@ $(document).ready(function () {
             // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
             // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
 
+
+        },
+        // mobile
+        "(max-width: 768px)": function () {
+            // The ScrollTriggers created inside these functions are segregated and get
+            // reverted/killed when the media query doesn't match anymore.
+
+        },
+
+        // all
+        "all": function () {
             preloadFrames();
 
             ScrollTrigger.defaults({
@@ -230,17 +241,6 @@ $(document).ready(function () {
             resize();
             images[0].onload = render;
             window.addEventListener("resize", resize);
-        },
-        // mobile
-        "(max-width: 768px)": function () {
-            // The ScrollTriggers created inside these functions are segregated and get
-            // reverted/killed when the media query doesn't match anymore.
-
-        },
-
-        // all
-        "all": function () {
-
         }
     });
 
