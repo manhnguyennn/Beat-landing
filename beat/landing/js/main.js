@@ -56,21 +56,21 @@ $(document).ready(function () {
             //     }
             // });
 
-            // gsap.fromTo(title.querySelectorAll('.word'), {
-            //         'will-change': 'opacity',
-            //         opacity: 0.1
-            //     },
-            //     {
-            //         ease: 'none',
-            //         opacity: 1,
-            //         stagger: 0.05,
-            //         scrollTrigger: {
-            //             trigger: title,
-            //             start: 'top bottom-=20%',
-            //             end: 'center top+=20%',
-            //             scrub: true,
-            //         }
-            //     });
+            gsap.fromTo(title.querySelectorAll('.word'), {
+                    'will-change': 'opacity',
+                    opacity: 0.1
+                },
+                {
+                    ease: 'none',
+                    opacity: 1,
+                    stagger: 0.05,
+                    scrollTrigger: {
+                        trigger: title,
+                        start: 'top bottom-=20%',
+                        end: 'center top+=20%',
+                        scrub: true,
+                    }
+                });
 
         });
 
