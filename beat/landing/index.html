@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Network</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/splitting.css">
+    <link rel="stylesheet" href="css/splitting-cells.css">
+    <link rel="stylesheet" href="css/swiper.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/ScrollTrigger.js"></script>
+    <script src="js/ScrollSmoother.min.js"></script>
+    <script src="js/splitting.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+<div class="beat-main__header">
+    <div class="header-content">
+        <a href="#" class="beat-logo">
+            <svg width="218" height="60" viewBox="0 0 218 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_101_16)">
+                    <path d="M75.1979 26.5188C76.9122 28.0257 79.1649 28.8176 81.7803 28.8176C87.2529 28.8176 91.5386 24.264 91.5386 18.4455C91.5386 12.6269 87.2529 8.07333 81.7803 8.07333C79.1649 8.07333 76.9012 8.86526 75.1979 10.3721V0H70.5715V28.2786H75.1979V26.5188ZM81.132 12.231C84.6045 12.231 87.0331 14.7828 87.0331 18.4455C87.0331 22.1082 84.6045 24.6489 81.132 24.6489C78.2089 24.6489 75.1979 22.3281 75.1979 18.4455C75.1979 14.5628 78.2199 12.231 81.132 12.231Z"
+                          fill="#111111"/>
+                    <path d="M103.692 28.8178C108.22 28.8178 111.582 26.618 113.154 22.6253L113.286 22.2733L109.11 21.3714L109 21.5914C107.934 23.7252 106.242 24.7151 103.681 24.7151C100.934 24.7151 98.7583 22.6693 98.2858 19.7105H113.659V18.0057C113.473 12.3411 109.242 8.0625 103.835 8.0625C98.033 8.0625 93.6594 12.5391 93.6594 18.4786C93.6594 24.4181 97.9671 28.8178 103.681 28.8178M103.835 12.2312C106.363 12.2312 108.209 13.727 108.846 16.2458H98.4396C99.1869 13.496 101.714 12.2312 103.835 12.2312Z"
+                          fill="#111111"/>
+                    <path d="M125.484 28.8178C128.099 28.8178 130.363 28.0258 132.066 26.519V28.2788H136.692V8.60146H132.066V10.3613C130.352 8.85443 128.099 8.0625 125.484 8.0625C120.011 8.0625 115.725 12.6161 115.725 18.4346C115.725 24.2532 120.011 28.8068 125.484 28.8068M126.132 12.2202C129.044 12.2202 132.066 14.541 132.066 18.4346C132.066 22.3283 129.044 24.6381 126.132 24.6381C122.659 24.6381 120.231 22.0863 120.231 18.4346C120.231 14.7829 122.659 12.2202 126.132 12.2202Z"
+                          fill="#111111"/>
+                    <path d="M143.198 21.47C143.198 26.1336 145.813 28.8174 150.385 28.8174C152.077 28.8174 153.451 28.3995 155.264 27.3105L155.494 27.1786L154.044 23.2189L153.714 23.4389C152.78 24.0438 151.615 24.4288 150.67 24.4288C148.846 24.4288 147.846 23.2849 147.846 21.2171V12.5498H154.374V8.6121H147.846V2.68359H143.22V8.6011H139.11V12.5388H143.22V21.47H143.198Z"
+                          fill="#111111"/>
+                    <path d="M81.4726 38.0786C78.9342 38.0786 76.7803 38.9035 75.1869 40.4654V38.6176H70.5605V58.2949H75.1869V49.1877C75.1869 44.8101 77.088 42.4013 80.5496 42.4013C83.11 42.4013 84.7583 44.3151 84.7583 47.2629V58.2949H89.4177V46.4599C89.4177 41.5213 86.154 38.0786 81.4726 38.0786Z"
+                          fill="#111111"/>
+                    <path d="M111.407 48.0218C111.22 42.3573 106.989 38.0786 101.583 38.0786C95.7804 38.0786 91.4067 42.5552 91.4067 48.4947C91.4067 54.4343 95.7144 58.8339 101.429 58.8339C105.956 58.8339 109.319 56.6341 110.89 52.6414L111.022 52.2894L106.846 51.3875L106.736 51.6075C105.67 53.7413 103.978 54.7312 101.418 54.7312C98.6595 54.7312 96.4946 52.6854 96.0221 49.7266H111.396V48.0218H111.407ZM96.187 46.2509C96.9342 43.5012 99.4617 42.2363 101.583 42.2363C104.11 42.2363 105.956 43.7211 106.594 46.2509H96.187Z"
+                          fill="#111111"/>
+                    <path d="M154.451 38.6177L150.341 51.1787L146.088 38.6177H142.495L138.242 51.1787L134.132 38.6177H121.253V32.7002H116.626V38.6177H112.517V42.5554H116.626V51.4866C116.626 56.1502 119.242 58.834 123.813 58.834C125.506 58.834 126.879 58.4161 128.692 57.3271L128.923 57.1952L127.473 53.2355L127.143 53.4555C126.209 54.0604 125.044 54.4454 124.099 54.4454C122.275 54.4454 121.275 53.3015 121.275 51.2337V42.5664H130.802L136 58.1631L136.077 58.3831H140.176L144.319 46.2291L148.462 58.3831H152.561L159.143 38.6287H154.484L154.451 38.6177Z"
+                          fill="#111111"/>
+                    <path d="M169.176 38.1997C163.154 38.1997 158.615 42.6103 158.615 48.4619C158.615 54.3134 163.154 58.757 169.176 58.757C175.198 58.757 179.659 54.3244 179.659 48.4619C179.659 42.5993 175.154 38.1997 169.176 38.1997ZM169.176 54.6653C166.264 54.6653 163.165 52.4875 163.165 48.4619C163.165 44.4362 166.264 42.2474 169.176 42.2474C172.912 42.2474 175.154 45.4041 175.154 48.4619C175.154 51.5196 172.923 54.6653 169.176 54.6653Z"
+                          fill="#111111"/>
+                    <path d="M193.571 38.3867C190.143 38.3867 187.967 40.1686 186.637 41.9614V38.6177H182.011V58.2951H186.637V51.2556C186.637 45.9101 189.088 42.9733 193.527 42.9733C194.407 42.9733 195.242 43.0723 195.242 43.0723V38.6287L195 38.5517C194.462 38.3867 194.044 38.3867 193.56 38.3867"
+                          fill="#111111"/>
+                    <path d="M206.55 48.1431L216.857 38.6179H210.824L202.89 45.8003H202.132V30.0166H197.517V58.2952H202.132V50.3869H202.846L211.626 58.2952H218L206.55 48.1431Z"
+                          fill="#111111"/>
+                    <path d="M39.5715 17.1696C36.4286 17.0266 33.4286 17.5545 30.7034 18.6214C30.1649 18.8304 29.6264 18.3245 29.8242 17.7745L36 0.901925C36.1649 0.461962 35.8352 0 35.3737 0H21.5055C21.2198 0 20.9781 0.175985 20.8792 0.439963L0.0440092 57.3932C-0.109837 57.8332 0.208844 58.2951 0.670383 58.2951H14.5385C14.8242 58.2951 15.066 58.1192 15.1649 57.8552L18.4726 48.8249C18.6704 48.286 19.4176 48.22 19.6814 48.7259C23.2968 55.4354 30.3957 60 38.5385 60C50.3627 60 59.9451 50.4088 59.9451 38.5738C59.9451 27.2117 50.9011 17.6975 39.5715 17.1696ZM45.1649 40.7186C42.5165 47.802 35.8682 52.0147 30.3187 50.1228C24.7693 48.22 22.4066 40.9386 25.066 33.8442C27.7143 26.7498 34.3627 22.5481 39.9121 24.44C45.4616 26.3428 47.8242 33.6242 45.1649 40.7186Z"
+                          fill="#EA0029"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_101_16">
+                        <rect width="218" height="60" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+        <div class="src-btn">
+            <i>
+                <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1H23" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                          stroke-linecap="square"/>
+                </svg>
+
+            </i>
+            <i>
+                <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1H23" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                          stroke-linecap="square"/>
+                </svg>
+
+            </i>
+            <i>
+                <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1H23" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                          stroke-linecap="square"/>
+                </svg>
+
+            </i>
+        </div>
+    </div>
+    <div class="menu-expand"></div>
+</div>
+<div class="beat-wrapper" id="scrollsmoother-container">
+
+    <div class="beat-wrapper__cover">
+        <div class="bg-img">
+            <img src="" alt="">
+        </div>
+        <video src="" playsinline preload autoplay muted loop class="video-init"></video>
+    </div>
+    <div class="beat-wrapper__text-long">
+        <div class="heading">
+            <div class="title">A beat of life</div>
+            <div class="des"> BEAT Network <br>
+                Mạng lưới sáng tạo nội dung đa nền tảng
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="content__title" data-splitting data-effect16>
+                <p> As human beings, we often find ourselves feeling out of place in the world around
+                    us. We sense that something is not quite right, that the reality we experience is not necessarily
+                    the truth. And yet, we are bound by the beliefs and illusions that have been ingrained in us since
+                    childhood.
+                    It can be a difficult and confusing journey to try and unravel these beliefs, to see beyond the
+                    layers of deception that cloud our vision. We may feel as though we need to make an effort, to
+                    strive for enlightenment, to grasp at something just beyond our reach.
+                    But what if the answer is not found in effort, but in surrender? What if we simply allow ourselves
+                    to be carried by the flow of existence, to trust in the natural rhythm of life itself?
+                </p>
+            </h2>
+        </div>
+    </div>
+    <div class="beat-wrapper__info">
+        <div class="info-numb">
+            <div class="heading">
+                <div class="text">Một BEAT Netwok</div>
+                <div class="swiper swiper-text">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                sáng tạo
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                năng động
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                bứt phá
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                hot trend
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="counter-group">
+                <div class="count-box">
+                    <div class="numb-flx">
+                        <div class="animCounter">70</div>
+                        <div class="plus">+</div>
+                    </div>
+                    <div class="txt">Channel</div>
+                </div>
+                <div class="count-box">
+                    <div class="numb-flx">
+                        <div class="animCounter">63</div>
+                        <div class="plus">M<span>+</span></div>
+                    </div>
+                    <div class="txt">Followers</div>
+                </div>
+                <div class="count-box">
+                    <div class="numb-flx">
+                        <div class="animCounter">3</div>
+                        <div class="plus">B<span>+</span></div>
+                    </div>
+                    <div class="txt"> Lượt tiếp cận/tháng</div>
+                </div>
+            </div>
+        </div>
+        <div class="pin-hoz">
+            <div class="content-hoz">
+                <div class="info-box reveal">
+                    <div class="heading">
+                        Hệ sinh thái <br>
+                        Beat Network
+                    </div>
+                    <div class="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et bibendum mauris, eu ultricies
+                        metus. Donec dictum magna a velit euismod, sit amet volutpat nisi cursus. Etiam feugiat eros vel
+                        massa laoreet, ac lobortis dolor suscipit.
+                    </div>
+                </div>
+                <ul class="list-network">
+                    <li>
+                        <a href="#" class="network reveal" target="_blank">
+                            <span class="stt">01</span>
+                            <span class="thumb">
+                            <img src="" alt="">
+                        </span>
+                            <span class="name">Beatvn</span>
+                            <span class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et bibendum mauris, eu ultricies metus. Donec dictum magna a velit euismod, si.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="network reveal" target="_blank">
+                            <span class="stt">02</span>
+                            <span class="thumb">
+                            <img src="" alt="">
+                        </span>
+                            <span class="name">Chuyện của Hà Nội</span>
+                            <span class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et bibendum mauris, eu ultricies metus. Donec dictum magna a velit euismod, si.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="network reveal" target="_blank">
+                            <span class="stt">03</span>
+                            <span class="thumb">
+                            <img src="" alt="">
+                        </span>
+                            <span class="name">Inside The Box</span>
+                            <span class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et bibendum mauris, eu ultricies metus. Donec dictum magna a velit euismod, si.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="network reveal" target="_blank">
+                            <span class="stt">04</span>
+                            <span class="thumb">
+                            <img src="" alt="">
+                        </span>
+                            <span class="name">Beatvn</span>
+                            <span class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et bibendum mauris, eu ultricies metus. Donec dictum magna a velit euismod, si.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="network reveal" target="_blank">
+                            <span class="stt">05</span>
+                            <span class="thumb">
+                            <img src="" alt="">
+                        </span>
+                            <span class="name">Beatvn</span>
+                            <span class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et bibendum mauris, eu ultricies metus. Donec dictum magna a velit euismod, si.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+   <div class="beat-wrapper__sequence">
+       <div class="sequence_box" id="canvas-wrap">
+           <canvas id="tablr-hero"></canvas>
+       </div>
+   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+@import "reset";
+@import "fonts";
+@import "landing";
+
+body {
+  --colorRed: #EA0029;
+  --colorBlack: #101820;
+  --colorWhite: #FFFFFF;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.reveal{
+  visibility: hidden;
+}
+
+.beat-main__header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  .header-content {
+    width: 100%;
+    padding: 35px 40px;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .beat-logo {
+    width: 218px;
+    display: block;
+  }
+
+  .src-btn {
+    &.active {
+      i {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 29px;
+        }
+
+        &:nth-child(2) {
+          width: 0;
+        }
+
+        &:nth-child(3) {
+          top: 29px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    background: #111111;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    i {
+      position: absolute;
+      left: 18px;
+      width: 24px;
+      transition: .15s;
+      display: block;
+
+      &:nth-child(1) {
+        top: 22px;
+      }
+
+      &:nth-child(2) {
+        top: 29px;
+      }
+
+      &:nth-child(3) {
+        top: 36px;
+      }
+    }
+  }
+}
+
