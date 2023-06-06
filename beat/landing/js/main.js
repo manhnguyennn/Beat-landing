@@ -85,7 +85,6 @@ $(document).ready(function () {
         'will-change': 'opacity',
     }, {
         opacity: 1,
-
         ease: 'easeOutIn',
         scrollTrigger: {
             trigger: '.beat-wrapper__info .info-numb',
@@ -98,7 +97,7 @@ $(document).ready(function () {
     });
     gsap.fromTo('.beat-wrapper__info .info-numb', {
         y: 0,
-        scale: 0.7,
+        scale: 0.9,
     }, {
         scale: 1,
         y: -offsetX,
@@ -183,10 +182,9 @@ $(document).ready(function () {
     //Sequence
     const canvas = document.querySelector("#tablr-hero");
     const context = canvas.getContext("2d");
-    const resolution = window.devicePixelRatio || 1;
 
 
-    var vw, vh;
+    var wwidth, wheight;
     var img_counter = 0;
 
     const frameCount = 179;
@@ -202,7 +200,7 @@ $(document).ready(function () {
     ScrollTrigger.matchMedia({
 
         // desktop - large screens for now
-        "(min-width: 1201px)": function () {
+        "(min-width: 1150px)": function () {
             // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
             // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
             preloadFrames();
@@ -285,8 +283,9 @@ $(document).ready(function () {
 
         // get the top left position of the image
         // in order to center the image within the canvas
-        let x = (canvas.width / 2) - (newWidth / 2);
-        let y = (canvas.height / 2) - (newHeight / 2);
+        let x = Math.floor(canvas.width / 2) - (newWidth / 2);
+        let y = Math.floor(canvas.height / 2) - (newHeight / 2);
+
 
         // When drawing the image, we have to scale down the image
         // width and height in order to fit within the canvas
@@ -295,22 +294,50 @@ $(document).ready(function () {
 
     function resize() {
 
-        vw = document.body.clientWidth; //user document.body.clientWidth to get the window viewport without the vertical scrollbar
-        vh = window.innerHeight;
+        wwidth = document.body.clientWidth; //user document.body.clientWidth to get the window viewport without the vertical scrollbar
+        wheight = window.innerHeight;
 
-        canvas.width = vw * resolution;
-        canvas.height = vh * resolution;
+        canvas.width = wwidth;
+        canvas.height = wheight;
 
-        canvas.style.width = vw + "px";
-        canvas.style.height = vh + "px";
-
-        context.scale(resolution, resolution);
+        canvas.style.width = wwidth + "px";
+        canvas.style.height = wheight + "px";
 
         render();
     }
 
     //End Sequence
+    let windowHeight = window.innerHeight;
+    let itemsSU = document.querySelectorAll('.slide-box');
+    itemsSU.forEach((item, i) => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: itemsSU,
+                pin: true,
+                scrub: 0,
+                start: () => "top top",
+                markers: true,
+                end: windowHeight * 5 + ' bottom',
+                duration: 1,
+            }
+        });
+        tl.addLabel('initial');
+        tl.to(item.querySelectorAll('.slide-up-tl'), {
+            ease: 'none',
+            y: 0,
+            stagger: 0.2,
+            start: () => "top top",
+            end: () => 'bottom bottom',
+        });
+    });
 
+    $('.marquee-box').marquee({
+        duration: 11000,
+        duplicated: true,
+        pauseOnHover: true,
+        gap: 0,
+        startVisible: true
+    });
     scroll();
 
 });
