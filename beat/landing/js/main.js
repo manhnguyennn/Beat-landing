@@ -1,37 +1,19 @@
 $(document).ready(function () {
-    $('.header-content .src-btn').click(function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).parent().parent().removeClass('active');
-        } else {
-            $(this).addClass('active');
-            $(this).parent().parent().addClass('active');
-        }
-    })
 
-    $('body').on('click touchstart', function () {
-        const videoElement = document.getElementsByClassName('video-init');
-        if (videoElement.playing) {
-            // video is already playing so do nothing
-        } else {
-            // video is not playing
-            // so play video now
-            videoElement.play();
-        }
-    });
+    // $('body').on('click touchstart', function () {
+    //     const videoElement = document.getElementsByClassName('video-init');
+    //     if (videoElement.playing) {
+    //         // video is already playing so do nothing
+    //     } else {
+    //         // video is not playing
+    //         // so play video now
+    //         videoElement.play();
+    //     }
+    // });
 
-    gsap.registerPlugin(ScrollTrigger);
 
-    const smoother = ScrollSmoother.create({
-        content: "#scrollsmoother-container",
-        smooth: 2,
-        normalizeScroll: true,
-        ignoreMobileResize: true,
-        effects: true,
-        //preventDefault: true,
-        //ease: 'power4.out',
-        //smoothTouch: 0.1,
-    });
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 
     Splitting();
 
@@ -95,22 +77,6 @@ $(document).ready(function () {
             // markers: true,
         }
     });
-    gsap.fromTo('.beat-wrapper__info .info-numb', {
-        y: 0,
-        scale: 0.9,
-    }, {
-        scale: 1,
-        y: -offsetX,
-        ease: 'easeOutIn',
-        scrollTrigger: {
-            trigger: '.beat-wrapper__info .info-numb',
-            start: '+=' + offsetX / 5 + ' bottom',
-            end: '+=' + offsetX * 1.5 + 'top',
-            scrub: true,
-            toggleActions: "play none none none",
-            // duration: 3000,
-        }
-    });
 
     gsap.utils.toArray(".animCounter").forEach(box => {
         var tler = gsap.from(box, {
@@ -141,7 +107,7 @@ $(document).ready(function () {
     let revealContainers = gsap.utils.toArray(".reveal");
     revealContainers.forEach((wrapreveal) => {
         tl.set(wrapreveal, {autoAlpha: 1});
-        tl.from(wrapreveal, 0.5, {
+        tl.from(wrapreveal, 0.3, {
             opacity: 0,
             yPercent: 15,
             ease: "power2",
@@ -153,31 +119,11 @@ $(document).ready(function () {
 
     ScrollTrigger.batch(revealContainers, {
         start: 'top bottom',
-        markers: true,
-        onEnter: elements => elements.forEach((e, i) => e.animation.delay(i * 0.05).restart(true)),
+        // markers: true,
+        onEnter: elements => elements.forEach((e, i) => e.animation.delay(i * 0.02).restart(true)),
         once: true
     });
 
-    let hozW = document.querySelector(".content-hoz").offsetWidth;
-    let windowW = document.documentElement.clientWidth;
-    console.log(hozW);
-    console.log(windowW);
-    console.log('offset scroll ngang' + (hozW - windowW));
-    gsap.fromTo('.content-hoz', {
-        x: 0,
-    }, {
-        x: -(hozW - windowW),
-        ease: 'none',
-        scrollTrigger: {
-            trigger: ".beat-wrapper__info",
-            pin: true,
-            scrub: 1,
-
-            duration: '100%',
-            invalidateOnRefresh: true,
-            anticipatePin: 1,
-        },
-    });
 
     //Sequence
     const canvas = document.querySelector("#tablr-hero");
@@ -203,6 +149,18 @@ $(document).ready(function () {
         "(min-width: 1150px)": function () {
             // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
             // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
+
+
+        },
+        // mobile
+        "(max-width: 768px)": function () {
+            // The ScrollTriggers created inside these functions are segregated and get
+            // reverted/killed when the media query doesn't match anymore.
+
+        },
+
+        // all
+        "all": function () {
             preloadFrames();
 
             ScrollTrigger.defaults({
@@ -227,18 +185,6 @@ $(document).ready(function () {
             resize();
             images[0].onload = render;
             window.addEventListener("resize", resize);
-
-        },
-        // mobile
-        "(max-width: 768px)": function () {
-            // The ScrollTriggers created inside these functions are segregated and get
-            // reverted/killed when the media query doesn't match anymore.
-
-        },
-
-        // all
-        "all": function () {
-
         }
     });
 
@@ -307,37 +253,317 @@ $(document).ready(function () {
     }
 
     //End Sequence
-    let windowHeight = window.innerHeight;
-    let itemsSU = document.querySelectorAll('.slide-box');
-    itemsSU.forEach((item, i) => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: itemsSU,
-                pin: true,
-                scrub: 0,
-                start: () => "top top",
-                markers: true,
-                end: windowHeight * 5 + ' bottom',
-                duration: 1,
-            }
-        });
-        tl.addLabel('initial');
-        tl.to(item.querySelectorAll('.slide-up-tl'), {
-            ease: 'none',
-            y: 0,
-            stagger: 0.2,
-            start: () => "top top",
-            end: () => 'bottom bottom',
+
+
+    const menusrc = document.querySelectorAll(".src-btn");
+    const triggermenu = document.querySelectorAll(".trigger-menu");
+
+
+    // tl.addLabel("Start");
+    //
+    // tl.from(
+    //     menusrc,
+    //     {
+    //         background: '#111111', // Move the heading up by 100 pixels
+    //         duration: 0.15, // Animation duration
+    //         ease: "power2.out" // Easing function
+    //     },
+    //     "<"
+    // );
+    // tl.addLabel(`label`);
+    // tl.to(menusrc, {
+    //     background: '#EA0029', // Move the heading up by 100 pixels
+    //     duration: 0.15, // Animation duration
+    //     ease: "power2.out" // Easing function
+    // });
+    //
+    // tl.addLabel("end");
+    //
+    // // We can then use ScrollTrigger to trigger the animation when each group comes into view
+    // triggermenu.forEach((grouptrigger) => {
+    //     ScrollTrigger.create({
+    //         trigger: grouptrigger, // The element that triggers the animation
+    //         start: "top top", // When the top of the group reaches 75% of the viewport height
+    //         end: "bottom bottom", // When the bottom of the group reaches 25% of the viewport height
+    //         onEnter: () => tl.tweenTo(tl.nextLabel(menusrc)), // Play the animation when the group comes into view
+    //         onLeaveBack: () => tl.tweenTo(tl.previousLabel(menusrc)), // Reverse the animation when the group leaves the view
+    //         markers: true // Show markers on the page to help with debugging
+    //     });
+    // });
+
+    // gsap.fromTo(menusrc, {
+    //
+    //     background: '#111111',
+    //     'will-change': 'background',
+    // }, {
+    //     background: '#EA0029',
+    //     ease: 'easeOutIn',
+    //     scrollTrigger: {
+    //         trigger: triggermenu,
+    //         start: 'top top',
+    //         end: 'bottom bottom',
+    //         scrub: true,
+    //         toggleActions: "play none none reverse",
+    //         // markers: true,
+    //     }
+    // });
+
+    // gsap.from(menusrc, {
+    //     scrollTrigger: {
+    //         start: 'top top',
+    //         end: 'bottom bottom',
+    //         trigger: triggermenu,
+    //         toggleActions: "play none none reverse",
+    //         onEnter() {
+    //             $(menusrc).addClass('active')
+    //         },
+    //         onLeaveBack() {
+    //             $(menusrc).removeClass('active')
+    //         },
+    //         onLeave() {
+    //             $(menusrc).removeClass('active')
+    //         },
+    //         onEnterBack() {
+    //             $(menusrc).addClass('active')
+    //         },
+    //     }
+    // });
+    triggermenu.forEach((grouptrigger) => {
+        ScrollTrigger.create({
+            start: 'top top',
+            end: 'bottom bottom',
+            trigger: grouptrigger,
+            // markers: true,
+            onEnter() {
+                $(menusrc).addClass('active')
+            },
+            onLeaveBack() {
+                $(menusrc).removeClass('active')
+            },
+            onLeave() {
+                $(menusrc).removeClass('active')
+            },
+            onEnterBack() {
+                $(menusrc).addClass('active')
+            },
         });
     });
 
-    $('.marquee-box').marquee({
-        duration: 11000,
-        duplicated: true,
-        pauseOnHover: true,
-        gap: 0,
-        startVisible: true
-    });
+
     scroll();
 
+
+    let me = $(window).width();
+
+    if (me > 768) {
+
+
+        const smoother = ScrollSmoother.create({
+            content: "#scrollsmoother-container",
+            smooth: 2,
+            normalizeScroll: true,
+            ignoreMobileResize: true,
+            effects: true,
+            //preventDefault: true,
+            //ease: 'power4.out',
+            //smoothTouch: 0.1,
+        });
+
+        gsap.utils.toArray(".list-nav .nav-link").forEach(function (button, i) {
+            button.addEventListener("click", (e) => {
+                var id = e.target.getAttribute("href");
+                console.log(id);
+                smoother.scrollTo(id, true, "top top");
+                e.preventDefault();
+                $('.menu-expand').removeClass('active');
+                smoother.paused(false);
+            });
+        });
+        window.onload = (event) => {
+            let urlHash = window.location.href.split("#")[1];
+
+            let scrollElem = document.querySelector("#" + urlHash);
+
+            console.log(scrollElem, urlHash);
+
+            if (urlHash && scrollElem) {
+                gsap.to(smoother, {
+                    scrollTop: smoother.offset(scrollElem, "top top"),
+                    duration: 2,
+                    // delay: 1
+                });
+            }
+        };
+
+
+        $('.src-btn').click(function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $('.menu-expand').removeClass('active');
+                smoother.paused(false);
+            } else {
+                $(this).addClass('active');
+                $('.menu-expand').addClass('active');
+                smoother.paused(true);
+            }
+        })
+        $('.backdrop-menu').click(function () {
+
+            $('.src-btn').removeClass('active');
+            $('.menu-expand').removeClass('active');
+            smoother.paused(false);
+        })
+
+        $('.contact-btn').click(function () {
+            $('.popup-contact').addClass('active');
+            smoother.paused(true);
+        })
+
+        $('.close-popup').click(function () {
+            $('.popup-contact').removeClass('active');
+            smoother.paused(false);
+        })
+
+        $('.popup-backdrop').click(function () {
+            $('.popup-contact').removeClass('active');
+            smoother.paused(false);
+        })
+
+        gsap.fromTo('.beat-wrapper__info .info-numb', {
+            y: 0,
+            scale: 0.9,
+        }, {
+            scale: 1,
+            y: -offsetX,
+            ease: 'easeOutIn',
+            scrollTrigger: {
+                trigger: '.beat-wrapper__info .info-numb',
+                start: '+=' + offsetX / 5 + ' bottom',
+                end: '+=' + offsetX * 1.5 + 'top',
+                scrub: true,
+                toggleActions: "play none none none",
+                // duration: 3000,
+            }
+        });
+
+        let hozW = document.querySelector(".content-hoz").offsetWidth;
+        let windowW = document.documentElement.clientWidth;
+        // console.log(hozW);
+        // console.log(windowW);
+        // console.log('offset scroll ngang' + (hozW - windowW));
+        gsap.fromTo('.content-hoz', {
+            x: 0,
+        }, {
+            x: -(hozW - windowW),
+            ease: 'none',
+            scrollTrigger: {
+                trigger: ".beat-wrapper__info",
+                pin: true,
+                scrub: 1,
+                end: '+=300%',
+                invalidateOnRefresh: true,
+                anticipatePin: 1,
+            },
+        });
+
+        $('.marquee-box').marquee({
+            duration: 11000,
+            duplicated: true,
+            pauseOnHover: true,
+            gap: 0,
+            startVisible: true
+        });
+
+        gsap.fromTo('.slide-card-1', {
+            yPercent: -30,
+            scale: 1.1,
+        }, {
+            scale: 1,
+            yPercent: 0,
+            ease: 'easeOutIn',
+            scrollTrigger: {
+                trigger: '.slide-wrap',
+                start: ' top+=60% top',
+                end: '+=50%',
+                scrub: true,
+                // markers:  {endColor: "#E2B410"}
+                // duration: 3000,
+            }
+        });
+        // let wheight = window.innerHeight;
+        let itemsSU = document.querySelectorAll(".slide-box");
+        itemsSU.forEach((item, i) => {
+            const slides = gsap.utils.toArray(".slide-up-tl", item);
+            gsap.set(slides, {
+                yPercent: 100
+            });
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: itemsSU,
+                    pin: true,
+                    scrub: true,
+                    start: () => "top top",
+                    // markers: {endColor: "fuchsia"},
+                    end: "+=500%"
+                }
+            });
+            tl.addLabel("initial");
+            tl.to(slides, {
+                ease: "none",
+                yPercent: 0,
+                stagger: 0.5
+            });
+        });
+
+    } else {
+
+        // gsap.utils.toArray(".list-nav .nav-link").forEach(function (button, i) {
+        //     button.addEventListener("click", (e) => {
+        //         var id = e.target.getAttribute("href");
+        //         console.log(id);
+        //         smoother.scrollTo(id, true, "top top");
+        //         e.preventDefault();
+        //         $('.menu-expand').removeClass('active');
+        //         smoother.paused(false);
+        //     });
+        // });
+
+        $('.src-btn').click(function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $('.menu-expand').removeClass('active');
+            } else {
+                $(this).addClass('active');
+                $('.menu-expand').addClass('active');
+            }
+        })
+        $('.backdrop-menu').click(function () {
+
+            $('.src-btn').removeClass('active');
+            $('.menu-expand').removeClass('active');
+        })
+
+        $('.contact-btn').click(function () {
+            $('.popup-contact').addClass('active');
+        })
+
+        $('.close-popup').click(function () {
+            $('.popup-contact').removeClass('active');
+        })
+
+        $('.popup-backdrop').click(function () {
+            $('.popup-contact').removeClass('active');
+        })
+
+        document.querySelectorAll(".list-nav .nav-link").forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                gsap.to(window, {duration:2, scrollTo: {y: "#link-" + (index + 1), offsetY: 0}});
+                $('.src-btn').removeClass('active');
+                $('.menu-expand').removeClass('active');
+            });
+        });
+
+        console.log('dang chay mobile')
+
+    }
 });
