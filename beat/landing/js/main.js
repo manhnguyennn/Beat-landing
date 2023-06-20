@@ -350,7 +350,6 @@ $(document).ready(function () {
     });
 
 
-    scroll();
 
 
     let me = $(window).width();
@@ -360,7 +359,8 @@ $(document).ready(function () {
 
         const smoother = ScrollSmoother.create({
             content: "#scrollsmoother-container",
-            smooth: 2,
+            smooth: 1,
+            speed: 0.8,
             normalizeScroll: true,
             ignoreMobileResize: true,
             effects: true,
@@ -517,16 +517,6 @@ $(document).ready(function () {
 
     } else {
 
-        // gsap.utils.toArray(".list-nav .nav-link").forEach(function (button, i) {
-        //     button.addEventListener("click", (e) => {
-        //         var id = e.target.getAttribute("href");
-        //         console.log(id);
-        //         smoother.scrollTo(id, true, "top top");
-        //         e.preventDefault();
-        //         $('.menu-expand').removeClass('active');
-        //         smoother.paused(false);
-        //     });
-        // });
 
         $('.src-btn').click(function () {
             if ($(this).hasClass('active')) {
@@ -566,4 +556,7 @@ $(document).ready(function () {
         console.log('dang chay mobile')
 
     }
+
+    scroll();
+
 });
