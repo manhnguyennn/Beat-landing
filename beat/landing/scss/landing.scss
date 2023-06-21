@@ -3,6 +3,7 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 
     .beat-logo {
       width: 11.35vw;
@@ -13,9 +14,11 @@
       z-index: 3;
 
     }
-    .videoBox{
+
+    .videoBox {
       width: 100%;
-      height: 100%;
+      height: 120%;
+
     }
 
     .bg-img {
@@ -92,7 +95,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../web_images/slide-right-bg.png');
+    background-image: url('../web_images/slide-right-bg.webp');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -129,7 +132,8 @@
 
       .swiper {
         width: 100%;
-        height: 90px;
+        height: 95px;
+        overflow: hidden;
 
         .swiper-slide {
           display: flex;
@@ -139,6 +143,7 @@
 
       .slide-text {
         color: #EA0029;
+        height: 95px;
       }
 
       .counter-group {
@@ -458,8 +463,8 @@
 
     .mcn-box {
       display: inline-grid;
-      grid-template-columns: repeat(48, 12.74vh);
-      grid-template-rows: repeat(6, 12.74vh);
+      grid-template-columns: repeat(48, 9.74vh);
+      grid-template-rows: repeat(6, 9.74vh);
       //grid-template-rows: 12.74vh;
       height: 100%;
 
@@ -566,7 +571,7 @@
   }
 
   &__inside {
-    background-image: url('../web_images/inside-bg.png');
+    background-image: url('../web_images/inside-bg.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -688,6 +693,45 @@
         position: absolute;
         width: 100%;
         height: 25vw;
+      }
+
+      .tag {
+        width: 4vw;
+        position: absolute;
+        top: -1.7vw;
+        right: -1.7vw;
+        display: block;
+
+        .icn {
+          width: 100%;
+          position: relative;
+          z-index: 1;
+          display: block;
+          animation: spin 5s linear infinite 0s;
+        }
+
+        .txt {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 2vw;
+          display: block;
+          z-index: 2;
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+
       }
 
       .bk-cover {
@@ -1061,6 +1105,7 @@
 @media screen and (max-width: 768px) {
   .beat-wrapper {
     &__cover {
+      height: 120vw;
 
       .beat-logo {
         width: 130px;
@@ -1120,7 +1165,7 @@
         margin-bottom: 30px;
 
         .heading {
-          font-size: 34px;
+          font-size: 32px;
         }
 
         .text {
@@ -1137,7 +1182,7 @@
         }
 
         .slide-text {
-
+          height: 40px;
         }
 
         .counter-group {
@@ -1208,6 +1253,10 @@
         gap: 15px;
         overflow-y: hidden;
 
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
         li {
           &:nth-child(1) {
             margin-left: 20px;
@@ -1234,6 +1283,7 @@
 
         .thumb {
           width: 110px;
+          height: 110px;
           margin-bottom: 24px;
 
           img {
@@ -1427,11 +1477,19 @@
       }
     }
 
+    &__text-middle {
+      font-size: 15vw;
+      padding: 50vw 0px;
+      height: auto;
+
+    }
+
     &__inside {
       padding: 60px 0;
 
       .text-head {
         margin-bottom: 30px;
+        padding: 0 20px;
       }
 
       .heading {
@@ -1441,25 +1499,36 @@
 
       .des {
         width: 335px;
+        max-width: 100%;
         font-size: 18px;
       }
 
       .list-cover {
         justify-content: flex-start;
         flex-wrap: nowrap;
-        flex-direction: row-reverse;
-        gap: 20px;
+        gap: 50px;
         width: 100vw;
         overflow-x: scroll;
         padding: 50px 0;
 
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
         li {
           &:nth-child(1) {
-            margin-right: 20px;
+            margin-right: 30px;
+            order: 3;
+          }
+
+          &:nth-child(2) {
+
+            order: 2;
           }
 
           &:nth-last-child(1) {
-            margin-left: 20px;
+            margin-left: 30px;
+            order: 1;
           }
 
           flex-shrink: 0;
@@ -1478,6 +1547,31 @@
         .bk-front {
           height: 304.5px;
           transform: translate3d(0, 0, 13.5px);
+        }
+        .tag {
+          width: 60px;
+          position: absolute;
+          top: -25px;
+          right: -25px;
+          display: block;
+
+          .icn {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            display: block;
+            animation: spin 5s linear infinite 0s;
+          }
+
+          .txt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 30px;
+            display: block;
+            z-index: 2;
+          }
         }
 
         .bk-cover {
@@ -1565,14 +1659,19 @@
       .slide-card {
         width: 100%;
         flex-direction: column;
+        border: 1px solid #111111;
+        gap: 0;
 
         .thumb {
-
           width: 100%;
-          height: 100%;
+          height: auto;
+          padding-top: 100%;
+          position: relative;
 
           img {
-
+            position: absolute;
+            top: 0;
+            left: 0;
           }
         }
 

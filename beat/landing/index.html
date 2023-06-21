@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beat Network</title>
 
+    <link rel="icon" type="image/x-icon" href="web_images/favicon.png">
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/splitting.css">
     <link rel="stylesheet" href="css/splitting-cells.css">
-    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
     <script src="js/gsap.js"></script>
     <script src="js/ScrollTrigger.js"></script>
     <script src="js/ScrollSmoother.min.js"></script>
     <script src="js/ScrollToPlugin.min.js"></script>
     <script src="js/splitting.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/jquery.marquee.min.js"></script>
     <script src="js/main.js"></script>
 
 </head>
-<body>
+<body class="loading-body">
+<div class="loading-wrap loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
 <div class="src-btn">
     <i>
         <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -688,7 +700,8 @@
                     <div class="marquee-item">
                         <ul class="mcn-box">
                             <li>
-                                <a href="https://www.tiktok.com/@mctranngocvtv" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/@mctranngocvtv" class="kol-item fade-mob"
+                                   target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/Tranngoc.webp" alt="">
                         </span>
@@ -708,7 +721,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/@amthucmelam.official" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/@amthucmelam.official" class="kol-item fade-mob"
+                                   target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/amthucmelam.webp" alt="">
                         </span>
@@ -728,7 +742,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/@vietanhpipo_" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/@vietanhpipo_" class="kol-item fade-mob"
+                                   target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/vietanhpipo.webp" alt="">
                         </span>
@@ -748,7 +763,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/@tungmin.official" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/@tungmin.official" class="kol-item fade-mob"
+                                   target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/tungmin.webp" alt="">
                         </span>
@@ -768,7 +784,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/@pongchuan_olala" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/@pongchuan_olala" class="kol-item fade-mob"
+                                   target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/pongchuan.webp" alt="">
                         </span>
@@ -788,7 +805,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/@nhungtho2202" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/@nhungtho2202" class="kol-item fade-mob"
+                                   target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/nhungto.webp" alt="">
                         </span>
@@ -808,7 +826,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/" class="kol-item fade-mob" target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/dvhaianh.webp" alt="">
                         </span>
@@ -828,7 +846,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/" class="kol-item" target="_blank">
+                                <a href="https://www.tiktok.com/" class="kol-item fade-mob" target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/mcthaimanhthang.webp" alt="">
                         </span>
@@ -935,6 +953,26 @@
             <li>
                 <div class="bk-book book-3 ">
                     <div class="bk-front">
+                        <div class="tag">
+                            <div class="icn">
+                                <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M35.0002 0L41.2167 11.7996L52.4999 4.68927L51.9839 18.0161L65.3111 17.5001L58.2004 28.7833L70 35.0002L58.2004 41.2167L65.3111 52.4999L51.9839 51.9839L52.4999 65.3111L41.2167 58.2004L35.0002 70L28.7833 58.2004L17.5001 65.3111L18.0161 51.9839L4.68927 52.4999L11.7996 41.2167L0 35.0002L11.7996 28.7833L4.68927 17.5001L18.0161 18.0161L17.5001 4.68927L28.7833 11.7996L35.0002 0Z"
+                                          fill="#EA0029"/>
+                                </svg>
+                            </div>
+                            <div class="txt">
+                                <svg width="36" height="12" viewBox="0 0 36 12" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.51001 12L2.07001 0.825012H3.67501L8.52001 9.10501L7.80001 9.27001L8.98501 0.825012H11.025L9.46501 12H7.86001L3.07501 3.66001L3.73501 3.49501L2.55001 12H0.51001Z"
+                                          fill="white"/>
+                                    <path d="M11.4782 12L13.0382 0.825012H20.4782L20.2232 2.62501H14.8232L14.4332 5.49001H19.5182L19.2782 7.29001H14.1782L13.7732 10.2H19.1582L18.9182 12H11.4782Z"
+                                          fill="white"/>
+                                    <path d="M22.3341 12L20.8941 0.825012H23.0391L24.0591 10.35H23.4141L27.3291 0.825012H29.3541L30.5691 10.35H29.8491L33.6441 0.825012H35.8641L31.3191 12H28.9641L27.7941 2.73001H28.4541L24.6741 12H22.3341Z"
+                                          fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
                         <div class="bk-cover">
                         </div>
                     </div>
@@ -964,7 +1002,7 @@
     <div class="beat-wrapper__slide-up">
         <div class="slide-wrap">
             <div class="slide-box">
-                <div class="slide-up-card">
+                <div class="slide-up-card fade-mob">
                     <div class="slide-card slide-card-1">
                         <div class="thumb">
                             <img src="" alt="">
@@ -984,7 +1022,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-up-card slide-up-tl">
+                <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
                             <img src="" alt="">
@@ -1007,7 +1045,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-up-card slide-up-tl">
+                <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
                             <img src="" alt="">
@@ -1030,7 +1068,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-up-card slide-up-tl">
+                <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
                             <img src="" alt="">
@@ -1053,7 +1091,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-up-card slide-up-tl">
+                <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
                             <img src="" alt="">
