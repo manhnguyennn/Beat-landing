@@ -50,7 +50,7 @@
 
   &__text-long {
     background: var(--colorRed);
-    padding: 1vw 2.1vw 16vw;
+    padding: 1vw 2.1vw 30vw;
 
     .heading {
       display: flex;
@@ -60,6 +60,7 @@
     }
 
     .title {
+      width: 56.2vw;
       font-size: 10vw;
       flex-shrink: 0;
       line-height: 110%;
@@ -357,7 +358,7 @@
       font-size: 8.2vw;
       line-height: 110%;
       /* identical to box height, or 176px */
-      font-family: PlusJaS-SemiBold;
+      font-family: PlusJaS-Bold;
       letter-spacing: -0.01em;
       margin-bottom: 10px;
       color: #EA0029;
@@ -554,7 +555,7 @@
   }
 
   &__text-middle {
-    height: 100vh;
+    padding: 50vw 0;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -566,7 +567,7 @@
     text-align: center;
     letter-spacing: -0.01em;
 
-    color: var(--colorRed);
+    color: #111;
 
   }
 
@@ -843,6 +844,7 @@
 
   &__slide-up {
     background: var(--colorRed);
+    margin-top: -1px;
 
     .slide-box {
       width: 100%;
@@ -869,16 +871,19 @@
     .slide-card {
       width: 83.64vw;
       background: #EA0029;
+      height: 75vh;
       border: 2px solid #111111;
       border-radius: 15px;
       overflow: hidden;
       display: flex;
       align-items: center;
       gap: 5vh;
+      padding-left: 9vh;
+      box-sizing: border-box;
 
       .thumb {
-        width: 71.09vh;
-        height: 71.09vh;
+        width: 60vh;
+        height: 60vh;
         flex-shrink: 0;
 
         img {
@@ -895,7 +900,8 @@
       }
 
       .text {
-        font-size: 7.4vh;
+        font-size: 6.4vh;
+
         margin-bottom: 3vh;
         line-height: 110%;
         /* or 77px */
@@ -906,9 +912,9 @@
       }
 
       .des {
-        font-size: 2.45vh;
+        font-size: 2.35vh;
         margin-bottom: 3vh;
-        line-height: 120%;
+        line-height: 140%;
         /* or 28px */
         font-family: PlusJaS-Medium;
         letter-spacing: -0.01em;
@@ -937,6 +943,12 @@
       }
 
       .contact-btn {
+        &:hover {
+          background: #111111;
+          color: #fff;
+        }
+
+        transition: .15s ease;
         font-size: 1.9vh;
         line-height: 120%;
         /* identical to box height, or 22px */
@@ -1012,13 +1024,12 @@
   }
 
   &__contact {
-    min-height: 100vh;
     width: 100%;
     background-image: url('../web_images/contact-bg.webp');
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 8vw 10.26vw 12vw;
+    padding: 5vw 10.26vw 6vw;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -1126,7 +1137,7 @@
 
     &__text-long {
 
-      padding: 9px 17px 53px;
+      padding: 9px 17px 40vw;
 
       .heading {
         flex-direction: column;
@@ -1136,6 +1147,7 @@
       }
 
       .title {
+        width: 100%;
         font-size: 60px;
       }
 
@@ -1232,6 +1244,7 @@
         padding: 30px 20px;
         width: 100%;
         gap: 46px;
+        margin-top: -43vw;
       }
 
       .info-box {
@@ -1319,7 +1332,8 @@
     }
 
     &__mcn {
-      padding: 30px 20px;
+      padding: 45px 28px 60px;
+
 
       .heading {
         font-size: 48px;
@@ -1479,7 +1493,7 @@
 
     &__text-middle {
       font-size: 15vw;
-      padding: 50vw 0px;
+      padding: 95vw 0px;
       height: auto;
 
     }
@@ -1493,12 +1507,12 @@
       }
 
       .heading {
-        width: 150px;
+        width: 183px;
         margin: 0 auto 28px;
       }
 
       .des {
-        width: 335px;
+        width: 300px;
         max-width: 100%;
         font-size: 18px;
       }
@@ -1548,6 +1562,7 @@
           height: 304.5px;
           transform: translate3d(0, 0, 13.5px);
         }
+
         .tag {
           width: 60px;
           position: absolute;
@@ -1661,6 +1676,8 @@
         flex-direction: column;
         border: 1px solid #111111;
         gap: 0;
+        padding: 0;
+        height: auto;
 
         .thumb {
           width: 100%;
@@ -1694,6 +1711,10 @@
             & + p {
 
               margin-top: 15px;
+            }
+
+            br {
+              display: none;
             }
 
             padding-left: 15px;
