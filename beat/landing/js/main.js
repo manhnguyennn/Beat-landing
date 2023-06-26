@@ -1,136 +1,43 @@
 $(document).ready(function () {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    //Sequence
-    const canvas = document.querySelector("#tablr-hero");
-    const context = canvas.getContext("2d");
 
-
-    var wwidth, wheight;
-    var img_counter = 0;
-
-    const frameCount = 179;
-    const currentFrame = index => (
-        `../landing/web_images/sequence/TuDo_${index.toString().padStart(3, '')}.webp`
-    );
-
-    const images = []
-    const heroFrames = {
-        frame: 0
-    };
-
-    ScrollTrigger.matchMedia({
-
-        // desktop - large screens for now
-        "(min-width: 1150px)": function () {
-            // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
-            // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
-
-
-        },
-        // mobile
-        "(max-width: 768px)": function () {
-            // The ScrollTriggers created inside these functions are segregated and get
-            // reverted/killed when the media query doesn't match anymore.
-
-        },
-
-        // all
-        "all": function () {
-            preloadFrames();
-
-            ScrollTrigger.defaults({
-                // markers: true,
-                // anticipatePin: 1
-            });
-
-            gsap.to(heroFrames, {
-                frame: frameCount - 1,
-                snap: "frame",
-                scrollTrigger: {
-                    scrub: 1,
-                    trigger: '#canvas-wrap',
-                    pin: '#tablr-hero',
-                    pinSpacing: true,
-                    start: 'top top'
-                    // end: () => 'bottom top+=' + (window.innerHeight-200)
-                },
-                onUpdate: render
-            });
-
-            resize();
-            images[0].onload = render;
-            window.addEventListener("resize", resize);
-        }
-    });
-
-    function preloadFrames() {
-
-        for (let i = 1; i <= frameCount; i++) {
-            const img = new Image();
-
-            img.src = currentFrame(i);
-            images.push(img);
-
-            if (img.complete)
-                incrementCounter();
-            else
-                img.addEventListener('load', incrementCounter, false);
-        }
-
-    }
-
-    function incrementCounter() {
-        img_counter++;
-
-    }
-
-    function render() {
-
-        context.save();
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        // context.drawImage(images[heroFrames.frame], 0, 0, vw, vh);
-        context.restore();
-
-        let loadedImageWidth = images[heroFrames.frame].width;
-        let loadedImageHeight = images[heroFrames.frame].height;
-
-        // get the scale
-        // it is the min of the 2 ratios
-        let scaleFactor = Math.max(canvas.width / images[heroFrames.frame].width, canvas.height / images[heroFrames.frame].height);
-
-        // Finding the new width and height based on the scale factor
-        let newWidth = images[heroFrames.frame].width * scaleFactor;
-        let newHeight = images[heroFrames.frame].height * scaleFactor;
-
-        // get the top left position of the image
-        // in order to center the image within the canvas
-        let x = Math.floor(canvas.width / 2) - (newWidth / 2);
-        let y = Math.floor(canvas.height / 2) - (newHeight / 2);
-
-
-        // When drawing the image, we have to scale down the image
-        // width and height in order to fit within the canvas
-        context.drawImage(images[heroFrames.frame], x, y, newWidth, newHeight);
-    }
-
-    function resize() {
-
-        wwidth = document.body.clientWidth; //user document.body.clientWidth to get the window viewport without the vertical scrollbar
-        wheight = window.innerHeight;
-
-        canvas.width = wwidth;
-        canvas.height = wheight;
-
-        canvas.style.width = wwidth + "px";
-        canvas.style.height = wheight + "px";
-
-        render();
-    }
-
-    //End Sequence
 
     function allFunc() {
+        const videoElement = document.getElementsByClassName('video-init');
+        checkCallVideo();
+        //console.log(videoElement.length);
+        function checkCallVideo() {
+            for (let i = 0; i < videoElement.length; i++) {
+                videoElement[i].addEventListener('suspend', () => {
+                    //console.log("suspend");
+                });
+                videoElement[i].addEventListener('play', () => {
+                    //$("#testlowmode").html("play");
+                    //console.log("play");
+                    var parentBoxVideo = videoElement[i].parentNode;
+                    parentBoxVideo.removeChild(parentBoxVideo.getElementsByClassName('bg-img')[0]);
+                    videoElement[i].classList.remove("hidden-video");
+                });
+            }
+        }
+
+
+        gsap.fromTo('.videoBox', {
+            yPercent: -10,
+        }, {
+            yPercent: 0,
+            ease: 'easeOutIn',
+            scrollTrigger: {
+                trigger: 'videoBox',
+                start: 'top top',
+                end: '+=100%',
+                scrub: true,
+                // toggleActions: "play none none none",
+                // duration: 3000,
+            }
+        });
+
 
         const swiper = new Swiper('.swiper-text', {
             slidePerView: 1,
@@ -190,103 +97,6 @@ $(document).ready(function () {
 
             });
 
-            // fx6Titles.forEach(title => {
-            //
-            //     const chars = title.querySelectorAll('.char');
-            //
-            //     gsap.fromTo(chars, {
-            //             'will-change': 'opacity, transform',
-            //             opacity: 0,
-            //             yPercent: 40,
-            //             scaleY: 1.2,
-            //             scaleX: 0.7,
-            //             transformOrigin: '50% 0%'
-            //         },
-            //         {
-            //             duration: 1.5,
-            //             ease: 'back.inOut(2)',
-            //             opacity: 1,
-            //             yPercent: 0,
-            //             scaleY: 1,
-            //             scaleX: 1,
-            //             scrollTrigger: {
-            //                 start: 'center bottom',
-            //                 end: 'bottom top',
-            //                 trigger: title,
-            //             },
-            //             stagger: {
-            //                 amount: 0.15,
-            //                 from: 'center'
-            //             }
-            //         });
-            //
-            // });
-
-            // fx6Titles.forEach(title => {
-            //
-            //     const chars = title.querySelectorAll('.char');
-            //
-            //     gsap.fromTo(chars, {
-            //             'will-change': 'opacity, transform',
-            //             opacity: 0,
-            //             scale: 0.6,
-            //             rotationZ: () => gsap.utils.random(-20, 20)
-            //         },
-            //         {
-            //             ease: 'power4',
-            //             opacity: 1,
-            //             scale: 1,
-            //             rotation: 0,
-            //             duration: 1.5,
-            //             scrollTrigger: {
-            //                 start: 'center bottom',
-            //                 end: 'bottom top',
-            //                 trigger: title,
-            //             },
-            //             stagger: {
-            //                 amount: 0.15,
-            //                 from: 0
-            //             }
-            //         });
-            //
-            // });
-
-
-            // const lettersAndSymbols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
-            // fx8Titles.forEach(title => {
-            //
-            //     const chars = title.querySelectorAll('.char');
-            //
-            //     chars.forEach((char, position) => {
-            //         let initialHTML = char.innerHTML;
-            //
-            //         gsap.fromTo(char, {
-            //                 opacity: 0
-            //             },
-            //             {
-            //                 duration: 0.03,
-            //                 innerHTML: () => lettersAndSymbols[Math.floor(Math.random() * lettersAndSymbols.length)],
-            //                 repeat: 1,
-            //                 repeatRefresh: true,
-            //                 opacity: 1,
-            //                 repeatDelay: 0.015,
-            //                 delay: (position + 1) * 0.18,
-            //                 onComplete: () => gsap.set(char, {innerHTML: initialHTML, delay: 0.03}),
-            //                 scrollTrigger: {
-            //                     start: 'center bottom',
-            //                     end: 'bottom top',
-            //                     trigger: title,
-            //                     onEnter: () => gsap.set(char, {opacity: 0})
-            //                 },
-            //                 stagger: {
-            //                     amount: 0.15,
-            //                     from: 'center'
-            //                 }
-            //             });
-            //
-            //     });
-            //
-            // });
 
             fx8Titles.forEach(title => {
 
@@ -325,21 +135,6 @@ $(document).ready(function () {
         let vW = window.innerWidth / 100;
         let offsetX = 20 * vW;
 
-        // gsap.fromTo('.beat-wrapper__info .info-numb', {
-        //     opacity: 0,
-        //     'will-change': 'opacity',
-        // }, {
-        //     opacity: 1,
-        //     ease: 'easeOutIn',
-        //     scrollTrigger: {
-        //         trigger: '.beat-wrapper__info .info-numb',
-        //         start: '+=' + offsetX / 5 + ' bottom',
-        //         end: '+=' + offsetX / 2 + 'bottom',
-        //         scrub: true,
-        //         toggleActions: "play none none none",
-        //         // markers: true,
-        //     }
-        // });
 
         gsap.utils.toArray(".animCounter").forEach(box => {
             var tler = gsap.from(box, {
@@ -407,8 +202,8 @@ $(document).ready(function () {
 
             const smoother = ScrollSmoother.create({
                 content: "#scrollsmoother-container",
-                smooth: 1,
-                speed: 0.8,
+                smooth: 1.8,
+                speed: 1,
                 normalizeScroll: true,
                 ignoreMobileResize: true,
                 effects: true,
@@ -424,6 +219,8 @@ $(document).ready(function () {
                     smoother.scrollTo(id, true, "top top");
                     e.preventDefault();
                     $('.menu-expand').removeClass('active');
+                    $('.src-btn').removeClass('active');
+
                     smoother.paused(false);
                 });
             });
@@ -463,21 +260,6 @@ $(document).ready(function () {
                 }
             };
 
-            gsap.fromTo('.videoBox', {
-                yPercent: -10,
-            }, {
-                yPercent: 0,
-                ease: 'easeOutIn',
-                scrollTrigger: {
-                    trigger: 'videoBox',
-                    start: 'top top',
-                    end: '+=100%',
-                    scrub: true,
-                    // toggleActions: "play none none none",
-                    // duration: 3000,
-                }
-            });
-
 
             $('.src-btn').click(function () {
                 if ($(this).hasClass('active')) {
@@ -511,6 +293,8 @@ $(document).ready(function () {
                 $('.popup-contact').removeClass('active');
                 smoother.paused(false);
             })
+
+
 
             gsap.fromTo('.beat-wrapper__info .info-numb', {
                 y: -offsetX / 1.2,
@@ -769,11 +553,12 @@ $(document).ready(function () {
 
     $('body').imagesLoaded({background: 'div'}, function () {
         console.log('all .item background images loaded');
-        $('.loading-wrap').removeClass('loading')
+
         $('body').removeClass('loading-body')
+        allFunc();
         setTimeout(function () {
-            allFunc();
-        }, 100);
+            $('.loading-wrap').removeClass('loading')
+        }, 300);
 
 
     });

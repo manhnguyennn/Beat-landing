@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Network</title>
+
+    <link rel="icon" type="image/x-icon" href="web_images/favicon.png">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/splitting.css">
+    <link rel="stylesheet" href="css/splitting-cells.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/ScrollTrigger.js"></script>
+    <script src="js/ScrollSmoother.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/splitting.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body class="loading-body">
+<div class="loading-wrap loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+<div class="src-btn">
+    <i>
+        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H23" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                  stroke-linecap="square"/>
+        </svg>
+
+    </i>
+    <i>
+        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H23" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                  stroke-linecap="square"/>
+        </svg>
+
+    </i>
+    <i>
+        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H23" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                  stroke-linecap="square"/>
+        </svg>
+
+    </i>
+</div>
+<div class="menu-expand">
+    <div class="backdrop-menu"></div>
+    <div class="menu-content">
+        <div class="logo">
+            <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_170_8568)">
+                    <path d="M62.09 21.8962C63.5054 23.1405 65.3655 23.7943 67.525 23.7943C72.0436 23.7943 75.5823 20.0345 75.5823 15.2302C75.5823 10.4259 72.0436 6.66605 67.525 6.66605C65.3655 6.66605 63.4964 7.31994 62.09 8.56415V0H58.27V23.3493H62.09V21.8962ZM66.9896 10.099C69.8569 10.099 71.8621 12.206 71.8621 15.2302C71.8621 18.2544 69.8569 20.3523 66.9896 20.3523C64.5761 20.3523 62.09 18.4361 62.09 15.2302C62.09 12.0243 64.5852 10.099 66.9896 10.099Z"
+                          fill="#111111"/>
+                    <path d="M85.6176 23.7941C89.3559 23.7941 92.1324 21.9778 93.4299 18.6811L93.5388 18.3904L90.0908 17.6457L90.0001 17.8274C89.12 19.5892 87.7226 20.4066 85.6085 20.4066C83.3401 20.4066 81.5436 18.7174 81.1534 16.2744H93.8473V14.8667C93.693 10.1896 90.1997 6.65674 85.7355 6.65674C80.9447 6.65674 77.3335 10.353 77.3335 15.2572C77.3335 20.1614 80.8903 23.7941 85.6085 23.7941M85.7355 10.0987C87.8225 10.0987 89.3468 11.3339 89.8731 13.4136H81.2805C81.8975 11.1432 83.9844 10.0987 85.7355 10.0987Z"
+                          fill="#111111"/>
+                    <path d="M103.61 23.7941C105.77 23.7941 107.639 23.1402 109.045 21.896V23.3491H112.865V7.10175H109.045V8.55484C107.63 7.31063 105.77 6.65674 103.61 6.65674C99.0916 6.65674 95.553 10.4166 95.553 15.2209C95.553 20.0252 99.0916 23.785 103.61 23.785M104.146 10.0897C106.55 10.0897 109.045 12.0059 109.045 15.2209C109.045 18.4358 106.55 20.343 104.146 20.343C101.278 20.343 99.2731 18.236 99.2731 15.2209C99.2731 12.2057 101.278 10.0897 104.146 10.0897Z"
+                          fill="#111111"/>
+                    <path d="M118.237 17.7276C118.237 21.5782 120.396 23.7942 124.171 23.7942C125.568 23.7942 126.702 23.4491 128.199 22.55L128.39 22.441L127.192 19.1716L126.92 19.3532C126.149 19.8527 125.187 20.1706 124.407 20.1706C122.9 20.1706 122.075 19.2261 122.075 17.5187V10.3622H127.464V7.11092H122.075V2.21582H118.255V7.10184H114.861V10.3531H118.255V17.7276H118.237Z"
+                          fill="#111111"/>
+                    <path d="M67.271 31.4414C65.175 31.4414 63.3966 32.1225 62.0809 33.4122V31.8864H58.261V48.1338H62.0809V40.614C62.0809 36.9995 63.6506 35.0106 66.5088 35.0106C68.6229 35.0106 69.9839 36.5908 69.9839 39.0247V48.1338H73.8311V38.3617C73.8311 34.284 71.1363 31.4414 67.271 31.4414Z"
+                          fill="#111111"/>
+                    <path d="M91.9871 39.6514C91.8329 34.9742 88.3396 31.4414 83.8754 31.4414C79.0846 31.4414 75.4734 35.1377 75.4734 40.0419C75.4734 44.9461 79.0302 48.5788 83.7484 48.5788C87.4867 48.5788 90.2632 46.7624 91.5607 43.4657L91.6696 43.1751L88.2217 42.4304L88.1309 42.612C87.2508 44.3739 85.8535 45.1913 83.7393 45.1913C81.4619 45.1913 79.6744 43.5021 79.2843 41.059H91.9781V39.6514H91.9871ZM79.4204 38.1892C80.0374 35.9187 82.1243 34.8743 83.8754 34.8743C85.9624 34.8743 87.4867 36.1004 88.013 38.1892H79.4204Z"
+                          fill="#111111"/>
+                    <path d="M127.528 31.886L124.135 42.2574L120.623 31.886H117.656L114.145 42.2574L110.751 31.886H100.117V27H96.297V31.886H92.9036V35.1373H96.297V42.5117C96.297 46.3624 98.4565 48.5784 102.231 48.5784C103.628 48.5784 104.763 48.2333 106.26 47.3342L106.45 47.2252L105.253 43.9557L104.98 44.1374C104.209 44.6369 103.247 44.9547 102.467 44.9547C100.961 44.9547 100.135 44.0102 100.135 42.3029V35.1464H108.002L112.294 48.0244L112.357 48.206H115.742L119.162 38.1706L122.583 48.206H125.967L131.402 31.8951H127.555L127.528 31.886Z"
+                          fill="#111111"/>
+                    <path d="M139.686 31.541C134.714 31.541 130.967 35.1828 130.967 40.0143C130.967 44.8459 134.714 48.5149 139.686 48.5149C144.659 48.5149 148.343 44.855 148.343 40.0143C148.343 35.1737 144.622 31.541 139.686 31.541ZM139.686 45.1365C137.282 45.1365 134.723 43.3383 134.723 40.0143C134.723 36.6904 137.282 34.8831 139.686 34.8831C142.771 34.8831 144.622 37.4896 144.622 40.0143C144.622 42.5391 142.78 45.1365 139.686 45.1365Z"
+                          fill="#111111"/>
+                    <path d="M159.83 31.6953C156.999 31.6953 155.202 33.1666 154.104 34.6469V31.886H150.284V48.1334H154.104V42.321C154.104 37.9073 156.128 35.4824 159.793 35.4824C160.519 35.4824 161.209 35.5642 161.209 35.5642V31.8951L161.009 31.8315C160.565 31.6953 160.22 31.6953 159.821 31.6953"
+                          fill="#111111"/>
+                    <path d="M170.545 39.751L179.056 31.8862H174.075L167.524 37.8166H166.898V24.7842H163.087V48.1335H166.898V41.6037H167.488L174.737 48.1335H180L170.545 39.751Z"
+                          fill="#111111"/>
+                    <path d="M32.6736 14.1767C30.0786 14.0586 27.6015 14.4946 25.3513 15.3755C24.9067 15.5481 24.4621 15.1303 24.6254 14.6762L29.7247 0.744709C29.8608 0.381436 29.5886 0 29.2075 0H17.7567C17.5208 0 17.3212 0.145309 17.2396 0.363272L0.0362124 47.3889C-0.0908165 47.7522 0.172315 48.1336 0.553402 48.1336H12.0042C12.2401 48.1336 12.4397 47.9883 12.5213 47.7703L15.2525 40.3142C15.4158 39.8692 16.0328 39.8147 16.2505 40.2324C19.2357 45.7723 25.0972 49.5413 31.8207 49.5413C41.5837 49.5413 49.4958 41.6219 49.4958 31.8499C49.4958 22.4684 42.0283 14.6126 32.6736 14.1767ZM37.292 33.6209C35.1053 39.4696 29.6158 42.9479 25.0337 41.3858C20.4516 39.8147 18.5008 33.8025 20.6966 27.9447C22.8833 22.087 28.3727 18.6177 32.9549 20.1798C37.537 21.7509 39.4878 27.7631 37.292 33.6209Z"
+                          fill="#EA0029"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_170_8568">
+                        <rect width="180" height="49.5413" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="content-box">
+            <ul class="list-nav">
+                <li>
+                    <a href="#link-1" class="nav-link">Hệ sinh thái</a>
+                </li>
+                <li>
+                    <a href="#link-2" class="nav-link">MCN Beat Tiktok</a>
+                </li>
+                <li>
+                    <a href="#link-3" class="nav-link">Insight & More</a>
+                </li>
+                <li>
+                    <a href="#link-4" class="nav-link">Dịch vụ</a>
+                </li>
+                <li>
+                    <a href="#link-5" class="nav-link">Đối tác & Khách hàng</a>
+                </li>
+                <li>
+                    <a href="#link-6" class="nav-link">Liên hệ</a>
+                </li>
+            </ul>
+            <div class="socials-box">
+                <a href="#" class="socials-link" target="_blank">
+                        <span class="icn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z"
+                                      fill="#111111"/>
+                            </svg>
+
+                        </span>
+                    <span class="txt">Facebok</span>
+                </a>
+                <a href="#" class="socials-link" target="_blank">
+                        <span class="icn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM11.0945 12.5295V10.4685C10.5693 10.3896 10.0334 10.4229 9.52205 10.5663C9.01069 10.7096 8.53552 10.9597 8.12785 11.3C7.72018 11.6403 7.38928 12.0632 7.15695 12.5408C6.92463 13.0183 6.79615 13.5397 6.78 14.0705C6.76702 14.5804 6.85595 15.0877 7.04157 15.5627C7.2272 16.0378 7.50579 16.471 7.86102 16.837C8.21624 17.2029 8.64095 17.4943 9.11024 17.694C9.57954 17.8937 10.084 17.9978 10.594 18C13.3125 18 14.4075 15.94 14.4075 14.09V10.0065C15.2533 10.5482 16.219 10.8744 17.22 10.9565V8.889C15.7755 8.658 14.6965 8.1575 14.35 6H12.3115V14.168C12.3309 14.401 12.2994 14.6355 12.2193 14.8552C12.1392 15.0749 12.0123 15.2746 11.8475 15.4404C11.6827 15.6063 11.4838 15.7344 11.2646 15.8159C11.0454 15.8974 10.8112 15.9304 10.578 15.9125C10.3472 15.929 10.1155 15.896 9.89852 15.8155C9.68154 15.735 9.48431 15.609 9.32009 15.446C9.15586 15.283 9.02845 15.0866 8.94642 14.8703C8.86438 14.6539 8.82963 14.4224 8.8445 14.1915C8.85538 13.9233 8.92631 13.6609 9.05207 13.4238C9.17782 13.1866 9.3552 12.9807 9.57112 12.8212C9.78705 12.6617 10.036 12.5527 10.2997 12.5022C10.5633 12.4517 10.8349 12.461 11.0945 12.5295Z"
+                                      fill="#111111"/>
+                            </svg>
+
+                        </span>
+                    <span class="txt">Tiktok</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="beat-wrapper" id="scrollsmoother-container">
+    <div class="beat-wrapper__cover">
+        <div class="beat-logo">
+            <svg width="218" height="60" viewBox="0 0 218 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_101_16)">
+                    <path d="M75.1979 26.5188C76.9122 28.0257 79.1649 28.8176 81.7803 28.8176C87.2529 28.8176 91.5386 24.264 91.5386 18.4455C91.5386 12.6269 87.2529 8.07333 81.7803 8.07333C79.1649 8.07333 76.9012 8.86526 75.1979 10.3721V0H70.5715V28.2786H75.1979V26.5188ZM81.132 12.231C84.6045 12.231 87.0331 14.7828 87.0331 18.4455C87.0331 22.1082 84.6045 24.6489 81.132 24.6489C78.2089 24.6489 75.1979 22.3281 75.1979 18.4455C75.1979 14.5628 78.2199 12.231 81.132 12.231Z"
+                          fill="#111111"/>
+                    <path d="M103.692 28.8178C108.22 28.8178 111.582 26.618 113.154 22.6253L113.286 22.2733L109.11 21.3714L109 21.5914C107.934 23.7252 106.242 24.7151 103.681 24.7151C100.934 24.7151 98.7583 22.6693 98.2858 19.7105H113.659V18.0057C113.473 12.3411 109.242 8.0625 103.835 8.0625C98.033 8.0625 93.6594 12.5391 93.6594 18.4786C93.6594 24.4181 97.9671 28.8178 103.681 28.8178M103.835 12.2312C106.363 12.2312 108.209 13.727 108.846 16.2458H98.4396C99.1869 13.496 101.714 12.2312 103.835 12.2312Z"
+                          fill="#111111"/>
+                    <path d="M125.484 28.8178C128.099 28.8178 130.363 28.0258 132.066 26.519V28.2788H136.692V8.60146H132.066V10.3613C130.352 8.85443 128.099 8.0625 125.484 8.0625C120.011 8.0625 115.725 12.6161 115.725 18.4346C115.725 24.2532 120.011 28.8068 125.484 28.8068M126.132 12.2202C129.044 12.2202 132.066 14.541 132.066 18.4346C132.066 22.3283 129.044 24.6381 126.132 24.6381C122.659 24.6381 120.231 22.0863 120.231 18.4346C120.231 14.7829 122.659 12.2202 126.132 12.2202Z"
+                          fill="#111111"/>
+                    <path d="M143.198 21.47C143.198 26.1336 145.813 28.8174 150.385 28.8174C152.077 28.8174 153.451 28.3995 155.264 27.3105L155.494 27.1786L154.044 23.2189L153.714 23.4389C152.78 24.0438 151.615 24.4288 150.67 24.4288C148.846 24.4288 147.846 23.2849 147.846 21.2171V12.5498H154.374V8.6121H147.846V2.68359H143.22V8.6011H139.11V12.5388H143.22V21.47H143.198Z"
+                          fill="#111111"/>
+                    <path d="M81.4726 38.0786C78.9342 38.0786 76.7803 38.9035 75.1869 40.4654V38.6176H70.5605V58.2949H75.1869V49.1877C75.1869 44.8101 77.088 42.4013 80.5496 42.4013C83.11 42.4013 84.7583 44.3151 84.7583 47.2629V58.2949H89.4177V46.4599C89.4177 41.5213 86.154 38.0786 81.4726 38.0786Z"
+                          fill="#111111"/>
+                    <path d="M111.407 48.0218C111.22 42.3573 106.989 38.0786 101.583 38.0786C95.7804 38.0786 91.4067 42.5552 91.4067 48.4947C91.4067 54.4343 95.7144 58.8339 101.429 58.8339C105.956 58.8339 109.319 56.6341 110.89 52.6414L111.022 52.2894L106.846 51.3875L106.736 51.6075C105.67 53.7413 103.978 54.7312 101.418 54.7312C98.6595 54.7312 96.4946 52.6854 96.0221 49.7266H111.396V48.0218H111.407ZM96.187 46.2509C96.9342 43.5012 99.4617 42.2363 101.583 42.2363C104.11 42.2363 105.956 43.7211 106.594 46.2509H96.187Z"
+                          fill="#111111"/>
+                    <path d="M154.451 38.6177L150.341 51.1787L146.088 38.6177H142.495L138.242 51.1787L134.132 38.6177H121.253V32.7002H116.626V38.6177H112.517V42.5554H116.626V51.4866C116.626 56.1502 119.242 58.834 123.813 58.834C125.506 58.834 126.879 58.4161 128.692 57.3271L128.923 57.1952L127.473 53.2355L127.143 53.4555C126.209 54.0604 125.044 54.4454 124.099 54.4454C122.275 54.4454 121.275 53.3015 121.275 51.2337V42.5664H130.802L136 58.1631L136.077 58.3831H140.176L144.319 46.2291L148.462 58.3831H152.561L159.143 38.6287H154.484L154.451 38.6177Z"
+                          fill="#111111"/>
+                    <path d="M169.176 38.1997C163.154 38.1997 158.615 42.6103 158.615 48.4619C158.615 54.3134 163.154 58.757 169.176 58.757C175.198 58.757 179.659 54.3244 179.659 48.4619C179.659 42.5993 175.154 38.1997 169.176 38.1997ZM169.176 54.6653C166.264 54.6653 163.165 52.4875 163.165 48.4619C163.165 44.4362 166.264 42.2474 169.176 42.2474C172.912 42.2474 175.154 45.4041 175.154 48.4619C175.154 51.5196 172.923 54.6653 169.176 54.6653Z"
+                          fill="#111111"/>
+                    <path d="M193.571 38.3867C190.143 38.3867 187.967 40.1686 186.637 41.9614V38.6177H182.011V58.2951H186.637V51.2556C186.637 45.9101 189.088 42.9733 193.527 42.9733C194.407 42.9733 195.242 43.0723 195.242 43.0723V38.6287L195 38.5517C194.462 38.3867 194.044 38.3867 193.56 38.3867"
+                          fill="#111111"/>
+                    <path d="M206.55 48.1431L216.857 38.6179H210.824L202.89 45.8003H202.132V30.0166H197.517V58.2952H202.132V50.3869H202.846L211.626 58.2952H218L206.55 48.1431Z"
+                          fill="#111111"/>
+                    <path d="M39.5715 17.1696C36.4286 17.0266 33.4286 17.5545 30.7034 18.6214C30.1649 18.8304 29.6264 18.3245 29.8242 17.7745L36 0.901925C36.1649 0.461962 35.8352 0 35.3737 0H21.5055C21.2198 0 20.9781 0.175985 20.8792 0.439963L0.0440092 57.3932C-0.109837 57.8332 0.208844 58.2951 0.670383 58.2951H14.5385C14.8242 58.2951 15.066 58.1192 15.1649 57.8552L18.4726 48.8249C18.6704 48.286 19.4176 48.22 19.6814 48.7259C23.2968 55.4354 30.3957 60 38.5385 60C50.3627 60 59.9451 50.4088 59.9451 38.5738C59.9451 27.2117 50.9011 17.6975 39.5715 17.1696ZM45.1649 40.7186C42.5165 47.802 35.8682 52.0147 30.3187 50.1228C24.7693 48.22 22.4066 40.9386 25.066 33.8442C27.7143 26.7498 34.3627 22.5481 39.9121 24.44C45.4616 26.3428 47.8242 33.6242 45.1649 40.7186Z"
+                          fill="#EA0029"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_101_16">
+                        <rect width="218" height="60" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="videoBox">
+            <video src="web_images/BNW-03.mp4" playsinline preload
+                   autoplay muted loop class="video-init"></video>
+        </div>
+        <div class="bg-img">
+            <img src="" alt="">
+        </div>
+
+    </div>
+    <div class="beat-wrapper__text-long">
+        <div class="heading">
+            <div class="title content__title" data-splitting data-effect6>A beat of life</div>
+            <div class="des fade-mob"> BEAT Network <br>
+                Mạng lưới sáng tạo nội dung đa nền tảng
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="content__title" data-splitting data-effect16>
+                BEAT Network sở hữu hệ thống truyền thông mạng xã hội đa nền tảng, đa kênh, chủ đề nội dung phong
+                phú và sáng tạo với 70+ kênh cùng 63+ triệu người theo dõi và 3+ tỷ lượt tiếp cận hàng tháng giúp
+                doanh nghiệp, thương hiệu, sản phẩm tiếp cận rộng rãi với người tiêu dùng một cách nhanh chóng và
+                hiệu quả.
+            </h2>
+        </div>
+    </div>
+    <div class="beat-wrapper__info" id="link-1">
+        <div class="info-numb">
+            <div class="heading">
+                <div class="text">Một BEAT Netwok</div>
+                <div class="swiper swiper-text">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                sáng tạo
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                năng động
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                bứt phá
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-text">
+                                hot trend
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="counter-group">
+                <div class="count-box">
+                    <div class="numb-flx">
+                        <div class="animCounter">70</div>
+                        <div class="plus">+</div>
+                    </div>
+                    <div class="txt">Channel</div>
+                </div>
+                <div class="count-box">
+                    <div class="numb-flx">
+                        <div class="animCounter">63</div>
+                        <div class="plus">M<span>+</span></div>
+                    </div>
+                    <div class="txt">Followers</div>
+                </div>
+                <div class="count-box">
+                    <div class="numb-flx">
+                        <div class="animCounter">3</div>
+                        <div class="plus">B<span>+</span></div>
+                    </div>
+                    <div class="txt"> Lượt tiếp cận/tháng</div>
+                </div>
+            </div>
+        </div>
+        <div class="pin-hoz">
+            <div class="content-hoz">
+                <div class="info-box reveal fade-mob">
+                    <div class="heading">
+                        Hệ sinh thái <br>
+                        Beat Network
+                    </div>
+                    <div class="des">
+                        Với 16 sản phẩm mạng xã hội, BEAT Network mang tới một hệ sinh thái phong phú, trải dài các mảng
+                        nội dung, cộng đồng góp phần vào sự phát triển mạnh mẽ của truyền thông internet tại Việt nam.
+                    </div>
+                </div>
+                <ul class="list-network fade-mob">
+                    <li>
+                        <a href="https://www.facebook.com/beatvn.network" class="network reveal" target="_blank">
+                            <span class="stt">01</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/Beatvn.webp" alt="">
+                        </span>
+                            <span class="name">Beatvn</span>
+                            <span class="des">
+                            Cộng đồng thông tin giải trí giới trẻ hàng đầu Việt Nam với những góc nhìn hài hước, tích cực và nhân văn.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/BeatvnNow" class="network reveal" target="_blank">
+                            <span class="stt">02</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/BeatNow.webp" alt="">
+                        </span>
+                            <span class="name">Beat Now</span>
+                            <span class="des">
+                            Cung cấp thông tin, giải trí nhanh cho cộng đồng Gen Z.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@showbeat_official" class="network reveal" target="_blank">
+                            <span class="stt">03</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/Showbeat.webp" alt="">
+                        </span>
+                            <span class="name">Showbeat</span>
+                            <span class="des">
+                            Kênh Tiktok hóng hớt showbiz đậm chất Beatvn - luôn có những góc nhìn đặc biệt và các sự kiện, tin tức gây chú ý trong giới showbiz, người nổi tiếng và nhiều điều thú vị khác.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@beatvn_viralworld" class="network reveal" target="_blank">
+                            <span class="stt">04</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/BeatvnViralWorld.webp" alt="">
+                        </span>
+                            <span class="name">Beatvn Viral World</span>
+                            <span class="des">
+                            Kênh Tiktok cập nhật tin tức giải trí quốc tế với mục đích tiếp cận trực tiếp tới gu giải trí nội dung của các bạn trẻ hiện đại về những kiến thức giá trị và thú vị về đa dạng các chủ đề trên thế giới.  
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@beatwhite275" class="network reveal" target="_blank">
+                            <span class="stt">05</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/Beatwhite.webp" alt="">
+                        </span>
+                            <span class="name">Beatwhite</span>
+                            <span class="des">
+                           Kênh Tiktok âm nhạc giải trí chính thức của cộng đồng Beatvn, làm mới các bài nhạc đang hot, sáng tác dựa trên các trend mạng xã hội hay làm mới lại nhạc xưa với phong cách hiện đại.
+                        </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/ChuyencuaHaNoi" class="network reveal" target="_blank">
+                            <span class="stt">06</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/ChuyenCuaHaNoi.webp" alt="">
+                        </span>
+                            <span class="name"> Chuyện của Hà Nội</span>
+                            <span class="des">
+                                Đem vẻ đẹp thủ đô và những câu chuyện Hà Nội đầy rung động đến với cộng đồng. Luôn nỗ lực lan tỏa những thông tin đúng đắn, những câu chuyện đẹp đẽ, nhân văn về cuộc sống và con người nơi đây để chạm đến trái tim của những ai đem lòng yêu Hà Nội.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/kienkhongngu.vn" class="network reveal" target="_blank">
+                            <span class="stt">07</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/KienKhongNgu.webp" alt="">
+                        </span>
+                            <span class="name">Kiến Không Ngủ </span>
+                            <span class="des">
+                                Nội dung giải trí tổng hợp, cung cấp thông tin và kiến thức thú vị, gần gũi và hữu ích trong đời sống, đặc biệt phù hợp với tệp GenZ. Ngoài ra còn là một sân chơi để các bạn trẻ được thể hiện mình và đưa ra quan điểm cá nhân một cách tự do, phù hợp, có ý nghĩa.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/insidethebox.cchn" class="network reveal" target="_blank">
+                            <span class="stt">08</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/InsidetheBox.webp" alt="">
+                        </span>
+                            <span class="name">Inside the Box </span>
+                            <span class="des">
+                                Hoạt động với mục đích đem tới những câu chuyện nhân văn, sâu sắc của con người tới cộng đồng nhằm tạo ra ảnh hưởng tích cực - bằng nhiều hình thức thể hiện sáng tạo khác nhau.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/caothuvn" class="network reveal" target="_blank">
+                            <span class="stt">09</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/CaoThu.webp" alt="">
+                        </span>
+                            <span class="name"> Cao Thủ</span>
+                            <span class="des">
+                                Kênh tin game và giải trí hàng đầu Việt Nam. Cao Thủ cập nhật tin tức, trend hot thú vị về game cũng như đời sống của các streammer, game thủ lừng danh,... và nhiều nội dung giải trí, đời sống XH hấp dẫn cũng như những bài viết nhân văn nhằm giúp đỡ những hoàn cảnh khó khăn.
+
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/chuyencuarsaigon" class="network reveal" target="_blank">
+                            <span class="stt">10</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/SaiGonNghen.webp" alt="">
+                        </span>
+                            <span class="name"> Sài Gòn nghenn</span>
+                            <span class="des">
+                                Nơi truyền cảm hứng về cuộc sống, con người và nét văn hóa đặc trưng của Sài Gòn. Đó là tình người hào sảng giữa dòng đời bận rộn mưu sinh, là những cá tính năng động trẻ trung tự do cất lời, cùng những điều thú vị của Sài Gòn.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/hongtotheheart" class="network reveal" target="_blank">
+                            <span class="stt">11</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/HongToTheHeart.webp" alt="">
+                        </span>
+                            <span class="name">Hóng to the Heart </span>
+                            <span class="des">
+                                Dự án video ngắn về nội dung phỏng vấn đường phố, dự án đã có cơ hội tiếp cận và lắng nghe quan điểm đa chiều của giới trẻ hiện nay về các vấn đề đời sống - xã hội có sự quan tâm cao, xoay quanh các chủ đề như tình yêu, gia đình, lối sống... 
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/groups/1532345240162276/?hoisted_section_header_type=recently_seen&multi_permalinks=6552844144779002"
+                           class="network reveal" target="_blank">
+                            <span class="stt">12</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/PhongThuToi.webp" alt="">
+                        </span>
+                            <span class="name">Phòng thú tội </span>
+                            <span class="des">
+                                Nơi tâm sự những câu chuyện rất đời. Phòng thú tội ở đây để kết nối, để sẻ chia và để cảm thông. Tấm lòng cho đi, tình người còn mãi
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/groups/465208540502452/?hoisted_section_header_type=recently_seen&multi_permalinks=1320049808351650"
+                           class="network reveal" target="_blank">
+                            <span class="stt">13</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/PhongTrutGian.webp" alt="">
+                        </span>
+                            <span class="name">Phòng trút giận </span>
+                            <span class="des">
+                                Không chỉ là nơi để giải toả những cảm xúc tiêu cực, đây còn là nơi chia sẻ và kết nối yêu thương. Nơi mà từ những genZ cho đến các bậc phụ huynh đều có thể cùng một nhịp đập.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/groups/447473432347539/?hoisted_section_header_type=recently_seen&multi_permalinks=1611042869323917"
+                           class="network reveal" target="_blank">
+                            <span class="stt">14</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/KySuDuongPho.webp" alt="">
+                        </span>
+                            <span class="name">Ký sự đường phố </span>
+                            <span class="des">
+                                Nơi tin tức về đường phố, những câu chuyện nhân văn hằng ngày xảy ra trong cuộc sống sẽ luôn được cập nhật đến bạn một cách nhanh và "chuẩn" nhất.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/groups/473343880440456/?hoisted_section_header_type=recently_seen&multi_permalinks=473926830382161"
+                           class="network reveal" target="_blank">
+                            <span class="stt">15</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/Review.webp" alt="">
+                        </span>
+                            <span class="name">Review quan trọng đến thế sao </span>
+                            <span class="des">
+                                Review chân thật, bình luận siêu chất, cập nhật nhanh nhất tất cả tình hình để xây dựng nên một Group luôn sôi động.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/groups/237333298132890/?hoisted_section_header_type=recently_seen&multi_permalinks=629087575624125"
+                           class="network reveal" target="_blank">
+                            <span class="stt">16</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/Drama.webp" alt="">
+                        </span>
+                            <span class="name">Drama quan trọng đến thế sao </span>
+                            <span class="des">
+                                Nơi cập nhật tin tức showbiz/đời sống chất lượng nhất và nhanh nhất một cách đa chiều và chính xác.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/groups/997347030413099" class="network reveal"
+                           target="_blank">
+                            <span class="stt">16</span>
+                            <span class="thumb">
+                            <img src="web_images/logo/Drama.webp" alt="">
+                        </span>
+                            <span class="name">Hà Nội Xịn!!!</span>
+                            <span class="des">
+                               Một địa chỉ thú vị dành cho bất cứ "dân chơi" nào tại Hà Nội.
+                            </span>
+                            <span class="view">
+                            <span class="txt">Khám phá</span>
+                            <span class="icn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 8H14" stroke="#EA0029" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M10 4L14 8L10 12" stroke="#EA0029" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="trigger-menu">
+        <div class="beat-wrapper__sequence">
+            <div class="sequence_box" id="canvas-wrap">
+                <canvas id="tablr-hero"></canvas>
+            </div>
+        </div>
+        <div class="beat-wrapper__mcn" id="link-2">
+            <div class="heading content__title" data-splitting data-effect6>MCN Beat Tiktok</div>
+            <div class="des">Sự lên ngôi của cơn sốt sáng tạo nội dung ngắn</div>
+            <div class="mcn-kol">
+                <div class="marquee-box">
+                    <div class="marquee-item">
+                        <ul class="mcn-box">
+                            <li>
+                                <a href="https://www.tiktok.com/@mctranngocvtv" class="kol-item fade-mob"
+                                   target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/Tranngoc.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">MC Trần Ngọc</span>
+                                 <span class="count">154.500 Followers</span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@amthucmelam.official" class="kol-item fade-mob"
+                                   target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/amthucmelam.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">Ẩm thực mẹ làm</span>
+                                 <span class="count">267.500 Followers</span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@vietanhpipo_" class="kol-item fade-mob"
+                                   target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/vietanhpipo.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">Việt Anh Pí Po</span>
+                                 <span class="count">1.200.000 Followers</span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@tungmin.official" class="kol-item fade-mob"
+                                   target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/tungmin.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">Tùng Min</span>
+                                 <span class="count">75.700 Followers</span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@pongchuan_olala" class="kol-item fade-mob"
+                                   target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/pongchuan.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">Pông Chuẩn</span>
+                                 <span class="count">65.900 Followers</span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@nhungtho2202" class="kol-item fade-mob"
+                                   target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/nhungto.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">Nhung Thỏ</span>
+                                 <span class="count">327.700 Followers</span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/" class="kol-item fade-mob" target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/dvhaianh.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">DV. Nguyễn Hải Anh</span>
+                                 <span class="count"></span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/" class="kol-item fade-mob" target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/mcthaimanhthang.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">MC. Thái Mạnh Thắng</span>
+                                 <span class="count"></span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="beat-wrapper__text-middle">
+        <h2 class=" content__title" data-splitting data-effect8>
+            KEEP CREATIVE ALIVE
+        </h2>
+    </div>
+    <div class="beat-wrapper__inside" id="link-3">
+        <div class="text-head">
+            <div class="heading">
+                <svg width="299" height="134" viewBox="0 0 299 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M140.158 77.3361C139.045 74.5108 137.556 72.172 135.691 70.3513C133.81 68.5305 131.632 67.1806 129.108 66.3487C126.6 65.5011 123.936 65.0773 121.146 65.0773C117.729 65.0773 114.578 65.5953 111.725 66.6626C108.873 67.7143 106.036 69.488 103.246 71.968C101.255 69.7234 98.9509 68.0282 96.2863 66.851C93.6531 65.6737 91.0198 65.0773 88.4179 65.0773C86.0511 65.0773 83.7313 65.5639 81.4586 66.5684C79.2015 67.5573 77.2266 68.8915 75.5494 70.4925V66.4742H62.1167V105.48H75.5181V81.119C77.1952 79.565 78.8097 78.4349 80.3614 77.7129C81.9131 77.0065 83.7 76.6455 85.769 76.6455C88.3709 76.6455 90.5966 77.6187 92.4148 79.5807C94.233 81.5428 95.1578 84.4152 95.1578 88.2137V105.48H108.559V88.2137C108.559 85.4669 108.277 83.0182 107.713 80.8521C109.468 79.3453 111.239 78.2779 113.073 77.6344C114.892 76.9751 116.835 76.6612 118.888 76.6612C121.537 76.6612 123.81 77.6344 125.628 79.5964C127.478 81.5585 128.371 84.4309 128.371 88.2294V105.495H141.773V87.5859C141.773 83.599 141.208 80.2086 140.096 77.3675L140.158 77.3361Z"
+                          fill="#111111"/>
+                    <path d="M202.667 82.2334C201.178 78.7645 199.14 75.7508 196.522 73.2394C193.921 70.728 190.864 68.7345 187.353 67.2748C183.842 65.815 180.112 65.0773 176.13 65.0773C172.149 65.0773 168.528 65.7993 165.049 67.2748C161.585 68.7345 158.528 70.7437 155.926 73.3336C153.325 75.9235 151.271 78.9215 149.735 82.3747C148.215 85.8122 147.462 89.5008 147.462 93.4092C147.462 97.3176 148.199 101.1 149.704 104.554C149.829 104.868 149.97 105.166 150.127 105.464H165.77C165.629 105.338 165.503 105.213 165.378 105.072C163.983 103.58 162.886 101.854 162.086 99.8604C161.271 97.867 160.879 95.7166 160.879 93.4249C160.879 91.1333 161.271 88.9986 162.086 87.0051C162.886 85.0117 163.983 83.2694 165.378 81.7782C166.773 80.2871 168.403 79.1255 170.253 78.2779C172.118 77.446 174.077 77.0065 176.193 77.0065C178.309 77.0065 180.284 77.446 182.118 78.2779C183.983 79.1098 185.613 80.2871 186.993 81.7782C188.388 83.2851 189.485 85.0117 190.284 87.0051C191.099 88.9986 191.491 91.1333 191.491 93.4249C191.491 95.7166 191.099 97.8827 190.284 99.8604C189.485 101.854 188.388 103.596 186.993 105.072C186.867 105.213 186.742 105.338 186.601 105.464H202.291C202.432 105.197 202.541 104.915 202.667 104.648C204.171 101.195 204.908 97.4432 204.908 93.4092C204.908 89.3753 204.171 85.7023 202.667 82.2177V82.2334Z"
+                          fill="#111111"/>
+                    <path d="M296.665 81.9038C295.129 78.4506 293.013 75.484 290.332 73.0039C287.652 70.5239 284.58 68.5776 281.116 67.1806C277.652 65.7836 274.016 65.0773 270.222 65.0773C266.429 65.0773 262.526 65.815 259.047 67.3219C255.583 68.813 252.526 70.8378 249.924 73.3807C247.322 75.9078 245.269 78.9215 243.78 82.3747C242.291 85.8122 241.539 89.5008 241.539 93.4092C241.539 97.3176 242.291 101.006 243.78 104.459C243.921 104.805 244.062 105.134 244.235 105.448H259.266C258.655 104.789 258.091 104.098 257.605 103.329C256.696 101.932 256.022 100.457 255.504 98.903H298.53C298.64 97.9141 298.749 96.9409 298.859 96.0148C298.953 95.0887 298.984 94.1941 298.984 93.3151C298.984 89.1555 298.201 85.357 296.649 81.8881L296.665 81.9038ZM255.52 88.1039C256.586 84.6821 258.451 81.9352 261.1 79.8476C263.78 77.7442 266.79 76.724 270.128 76.724C273.467 76.724 276.602 77.7599 279.313 79.8476C282.009 81.9352 283.89 84.6821 284.94 88.1039H255.52Z"
+                          fill="#111111"/>
+                    <path d="M247.464 72.0621L247.416 72.172C246.946 72.5644 246.492 72.9568 246.069 73.3806C243.451 75.9077 241.413 78.9214 239.924 82.3746C239.846 82.5316 239.783 82.7043 239.72 82.8612C238.561 81.684 237.338 80.6009 235.974 79.6592C234.391 78.5761 232.792 78.0267 231.162 78.0267C230.3 78.0267 229.36 78.2308 228.325 78.6389C227.307 79.0313 226.335 79.7062 225.457 80.6323C224.548 81.5741 223.796 82.7984 223.169 84.321C222.557 85.8435 222.244 87.7271 222.244 89.9717V105.464H208.842V66.4585H222.244V72.2505C223.858 69.9588 225.645 68.1851 227.589 66.9294C229.532 65.6737 231.727 65.0615 234.156 65.0615C236.586 65.0615 238.843 65.6894 241.1 66.9765C243.373 68.2479 245.489 69.9431 247.479 72.0464L247.464 72.0621Z"
+                          fill="#111111"/>
+                    <path d="M57.9317 119.355C58.9035 117.691 59.7812 115.667 60.5493 113.249C61.3486 110.864 61.8659 108.274 62.1323 105.464L50.988 105.448C50.8783 106.28 50.7529 107.081 50.5962 107.913C50.4394 108.745 50.173 109.545 49.8595 110.298L45.6745 105.464L40.9096 99.9389C45.2356 97.4118 48.3861 94.9474 50.4551 92.5773C52.4927 90.2071 53.5116 87.4446 53.5116 84.2582C53.5116 81.8253 53.0413 79.5964 52.1009 77.5401C51.1604 75.4996 49.8752 73.7102 48.2294 72.172C46.5836 70.6337 44.6557 69.4408 42.4143 68.5775C40.1729 67.7299 37.7747 67.2904 35.1885 67.2904C32.6023 67.2904 30.2982 67.6828 28.0881 68.499C25.878 69.2995 23.9501 70.4297 22.3043 71.8894C20.6586 73.3492 19.3733 75.0601 18.4328 77.0222C17.4924 78.9999 17.0222 81.1346 17.0222 83.442C17.0222 85.404 17.5237 87.4289 18.5582 89.5636C19.577 91.6983 21.2855 94.1783 23.7307 97.035C19.8435 99.4523 16.8968 102.026 14.8748 104.758C14.6867 104.993 14.53 105.229 14.3889 105.464C12.6961 108.023 11.8654 110.895 11.8654 114.097C11.8654 116.844 12.3826 119.434 13.4798 121.867C14.5613 124.3 16.0347 126.387 17.9313 128.177C19.8121 129.95 22.0379 131.363 24.5771 132.415C27.1476 133.466 29.875 133.984 32.7747 133.984C35.0317 133.984 37.0224 133.874 38.7622 133.623C40.4863 133.388 42.0381 133.011 43.4017 132.509C44.7811 131.991 46.035 131.347 47.2262 130.547C48.4018 129.762 49.6087 128.852 50.8626 127.753L56.3486 133.984L64.1073 126.215L57.963 119.34L57.9317 119.355ZM30.4862 79.0941C31.8812 77.9169 33.5741 77.3204 35.5647 77.3204C37.5553 77.3204 39.107 77.8698 40.5334 78.9685C41.9597 80.083 42.6807 81.527 42.6807 83.3007C42.6807 85.3099 41.85 87.0365 40.2042 88.4805C38.5584 89.9403 36.5365 91.2117 34.107 92.279L31.2856 89.2967C30.2041 88.1195 29.4361 87.0835 29.0129 86.2202C28.5897 85.3726 28.3859 84.4779 28.3859 83.5676C28.3859 81.7939 29.0756 80.3027 30.4862 79.1098V79.0941ZM38.1979 122.118C36.6619 122.495 35.0474 122.699 33.386 122.699C32.132 122.699 30.9721 122.463 29.8593 122.008C28.7621 121.537 27.806 120.925 27.0066 120.14C26.1915 119.355 25.5489 118.461 25.0473 117.425C24.5771 116.404 24.3263 115.306 24.3263 114.113C24.3263 112.229 24.7965 110.534 25.737 109.011C26.5207 107.787 27.7119 106.61 29.3264 105.48C29.6869 105.229 30.063 104.993 30.4706 104.742L31.1289 105.48L43.4017 119.293C41.4738 120.799 39.734 121.757 38.1979 122.118Z"
+                          fill="#EA0029"/>
+                    <path d="M0 2.80969V60.1486H14.4202V2.80969H0Z" fill="#111111"/>
+                    <path d="M73.7312 34.3123C72.5556 31.4556 70.9882 29.1325 69.0289 27.3274C67.0696 25.5223 64.8439 24.1724 62.3204 23.3091C59.8125 22.4458 57.1949 22.0063 54.4363 22.0063C53.2137 22.0063 51.9127 22.1319 50.5804 22.3831C49.2481 22.6342 47.9472 22.9795 46.6619 23.4504C45.3923 23.9213 44.1697 24.5021 42.9942 25.177C41.8029 25.8677 40.7998 26.6054 40.0161 27.4216L39.922 23.4033H26.5206V60.1642H39.922V38.048C41.5365 36.5098 43.339 35.364 45.3453 34.6419C47.3359 33.9356 49.3579 33.5746 51.4112 33.5746C52.7905 33.5746 54.1071 33.81 55.3924 34.2809C56.6777 34.7361 57.8219 35.4581 58.8094 36.4156C59.7968 37.3731 60.5962 38.5817 61.1918 40.0572C61.7718 41.5169 62.0696 43.2122 62.0696 45.1428V77.3047H75.471V44.4836C75.471 40.5595 74.8754 37.1691 73.6998 34.3123H73.7312Z"
+                          fill="#111111"/>
+                    <path d="M133.7 23.3091V60.1485H147.29V23.3091H133.7ZM133.497 0V13.9855H147.462V0H133.497Z"
+                          fill="#111111"/>
+                    <path d="M255.849 34.2809C254.736 31.5183 253.216 29.211 251.272 27.3745C249.36 25.5537 247.15 24.1881 244.673 23.2777C242.181 22.3673 239.548 21.9278 236.758 21.9278C234.329 21.9278 231.821 22.3046 229.203 23.0423C226.601 23.78 224.313 24.9415 222.322 26.4798L222.228 0H208.827V60.1485H222.228V37.0278C223.968 35.9133 225.77 35.0343 227.651 34.4065C229.517 33.7943 231.476 33.4804 233.545 33.4804C234.924 33.4804 236.241 33.7158 237.526 34.1867C238.796 34.6419 239.924 35.3639 240.88 36.3214C241.836 37.2789 242.636 38.4875 243.216 39.963C243.811 41.4227 244.125 43.118 244.125 45.0486V60.1642H257.511V44.1068C257.511 40.324 256.962 37.0435 255.849 34.2809Z"
+                          fill="#111111"/>
+                    <path d="M267.965 59.0184C267.965 59.4108 267.981 59.7718 267.997 60.1485H281.382C281.382 60.1485 281.382 60.0229 281.382 59.9444V35.4267H294.972V23.3091H281.382V7.54993H277.009C276.022 13.2006 274.172 17.7997 271.476 21.347C268.78 24.8944 265.254 27.5628 260.912 29.3679V35.4267H267.981V59.0184H267.965Z"
+                          fill="#111111"/>
+                    <path d="M88.9978 49.6476C90.5495 51.0446 92.3207 52.2218 94.3113 53.195C96.302 54.1525 98.3396 54.953 100.456 55.5652C104.061 56.6168 106.851 57.6999 108.841 58.7829C109.594 59.191 110.205 59.6462 110.675 60.1485H125.064C124.876 58.7201 124.484 57.3859 123.857 56.1773C122.964 54.4036 121.725 52.8183 120.174 51.4213C118.622 50.0243 116.819 48.8 114.766 47.7327C112.713 46.681 110.55 45.802 108.246 45.1271C104.703 44.0754 101.992 43.0081 100.095 41.9564C98.1985 40.9047 97.2581 39.6647 97.2581 38.2207C97.2581 37.4201 97.5089 36.6824 98.0104 36.0232C98.512 35.3639 99.139 34.8459 99.9227 34.4378C100.691 34.0297 101.537 33.7158 102.431 33.5117C103.324 33.292 104.186 33.1821 104.985 33.1821C107.337 33.1821 109.515 33.7472 111.506 34.8616C113.497 35.9761 115.268 37.4986 116.819 39.4293L124.829 31.3143C119.609 25.0985 112.885 21.9906 104.672 21.9906C102.117 21.9906 99.5935 22.3673 97.117 23.105C94.6248 23.8585 92.3991 24.9258 90.4398 26.3228C88.4806 27.7198 86.8975 29.4621 85.6749 31.5497C84.468 33.6373 83.8567 35.9761 83.8567 38.5817C83.8567 40.9518 84.3269 43.0237 85.2517 44.8288C86.1765 46.6339 87.4304 48.2349 88.9821 49.6319L88.9978 49.6476Z"
+                          fill="#111111"/>
+                    <path d="M202.792 23.4033H184.359C181.757 22.4772 178.92 22.0063 175.88 22.0063C172.839 22.0063 169.829 22.5557 167.039 23.6388C164.249 24.7218 161.789 26.213 159.688 28.1122C157.572 30.0115 155.895 32.2247 154.657 34.7832C153.419 37.326 152.792 40.0729 152.792 42.9924C152.792 45.1742 153.136 47.2147 153.826 49.1454C154.516 51.076 155.456 52.8183 156.632 54.3723C157.823 55.9262 159.14 57.2918 160.613 58.469C160.613 58.469 160.613 58.469 160.629 58.4847C162.024 59.5992 163.764 60.1485 165.55 60.1485H166.193C166.193 60.1485 172.039 56.7267 172.181 52.1591C171.005 51.6254 169.986 50.9191 169.093 50.0087C168.199 49.114 167.494 48.0466 166.977 46.838C166.459 45.6294 166.193 44.3423 166.193 42.961C166.193 41.5797 166.459 40.324 166.977 39.1311C167.494 37.9539 168.199 36.9022 169.093 36.0075C169.986 35.1128 171.005 34.3908 172.181 33.8571C173.34 33.3234 174.61 33.0723 175.958 33.0723C177.306 33.0723 178.591 33.3391 179.782 33.8571C180.974 34.3908 182.024 35.0971 182.917 36.0075C183.811 36.9022 184.516 37.9539 185.033 39.1311C185.551 40.3083 185.817 41.5954 185.817 42.961C185.817 44.3266 185.551 45.6137 185.033 46.838C184.736 47.5444 184.344 48.1722 183.92 48.7844C183.92 48.7844 181.46 53.2421 166.177 60.1485H186.695C188.576 60.1485 190.41 59.505 191.852 58.2964C192.62 57.6528 193.341 56.9622 193.999 56.2245C195.676 54.3566 196.961 52.3004 197.87 50.0244C198.764 47.7484 199.218 45.4096 199.218 42.9924C199.218 39.8217 198.497 36.8394 197.071 34.0455H202.745V23.419L202.792 23.4033Z"
+                          fill="#111111"/>
+                </svg>
+            </div>
+            <div class="des fade-web fade-mob">
+                Insight and More (IAM) là một cuốn sách được xuất bản nhằm kết nối những người làm Sáng tạo Nội dung
+                trên Social Media thông qua những cập nhật mới nhất về mạng xã hội và những chia sẻ từ các chuyên gia uy
+                tín hàng đầu trong ngành. <br> <br>
+                Nếu bạn đang "thong dong" làm việc với mạng xã hội hàng ngày thì cuốn sách này sẽ là một liều "doping"
+                giúp bạn chạy nhanh và xa hơn nữa!
+            </div>
+        </div>
+        <ul class="list-cover">
+            <li>
+                <div class="bk-book book-1 ">
+                    <div class="bk-front">
+                        <div class="bk-cover">
+                        </div>
+                    </div>
+
+
+                    <div class="bk-left">
+                        <h2>
+                            <span>Vol.1</span>
+                            <span>SOCIAL TRENDS</span>
+                        </h2>
+                    </div>
+
+                    <div class="bk-back"></div>
+                </div>
+            </li>
+            <li>
+                <div class="bk-book book-2 ">
+                    <div class="bk-front">
+                        <div class="bk-cover">
+                        </div>
+                    </div>
+
+
+                    <div class="bk-left">
+                        <h2>
+                            <span>Vol.2</span>
+                            <span>SOCIAL TRENDS</span>
+                        </h2>
+                    </div>
+                    <div class="bk-back"></div>
+
+                </div>
+            </li>
+            <li>
+                <div class="bk-book book-3 ">
+                    <div class="bk-front">
+                        <div class="tag">
+                            <div class="icn">
+                                <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M35.0002 0L41.2167 11.7996L52.4999 4.68927L51.9839 18.0161L65.3111 17.5001L58.2004 28.7833L70 35.0002L58.2004 41.2167L65.3111 52.4999L51.9839 51.9839L52.4999 65.3111L41.2167 58.2004L35.0002 70L28.7833 58.2004L17.5001 65.3111L18.0161 51.9839L4.68927 52.4999L11.7996 41.2167L0 35.0002L11.7996 28.7833L4.68927 17.5001L18.0161 18.0161L17.5001 4.68927L28.7833 11.7996L35.0002 0Z"
+                                          fill="#EA0029"/>
+                                </svg>
+                            </div>
+                            <div class="txt">
+                                <svg width="36" height="12" viewBox="0 0 36 12" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.51001 12L2.07001 0.825012H3.67501L8.52001 9.10501L7.80001 9.27001L8.98501 0.825012H11.025L9.46501 12H7.86001L3.07501 3.66001L3.73501 3.49501L2.55001 12H0.51001Z"
+                                          fill="white"/>
+                                    <path d="M11.4782 12L13.0382 0.825012H20.4782L20.2232 2.62501H14.8232L14.4332 5.49001H19.5182L19.2782 7.29001H14.1782L13.7732 10.2H19.1582L18.9182 12H11.4782Z"
+                                          fill="white"/>
+                                    <path d="M22.3341 12L20.8941 0.825012H23.0391L24.0591 10.35H23.4141L27.3291 0.825012H29.3541L30.5691 10.35H29.8491L33.6441 0.825012H35.8641L31.3191 12H28.9641L27.7941 2.73001H28.4541L24.6741 12H22.3341Z"
+                                          fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bk-cover">
+                        </div>
+                    </div>
+
+
+                    <div class="bk-left">
+                        <h2>
+                            <span>Vol.3</span>
+                            <span>SOCIAL TRENDS</span>
+                        </h2>
+                    </div>
+                    <div class="bk-back"></div>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="beat-wrapper__red-bg" id="link-4">
+        <div class="big-text">
+            <h2 class=" content__title" data-splitting data-effect6>
+                KNOW YOUR SOCIAL <br>
+                GROW YOUR AUDIENCE
+            </h2>
+            <div class="des">BLOOMING WITH BEAT?</div>
+        </div>
+    </div>
+    <div class="beat-wrapper__slide-up">
+        <div class="slide-wrap">
+            <div class="slide-box">
+                <div class="slide-up-card fade-mob">
+                    <div class="slide-card slide-card-1">
+                        <div class="thumb">
+                            <img src="" alt="">
+                        </div>
+                        <div class="total">
+                            <div class="text">Sáng tạo content</div>
+                            <div class="des">
+                                <p>
+                                    Nội dung sáng tạo độc nhất “Set the trends” đem về hàng triệu lượt tương tác trên
+                                    social.
+                                </p>
+                                <p>Tốc độ triển khai nhanh chóng.</p>
+                                <p> Sản xuất tư liệu truyền thông trên nền tảng số: Livestream, Video viral, Show,
+                                    Gamification.</p>
+                            </div>
+                            <a href="javascript:;" class="contact-btn">Liên hệ với chúng tôi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-up-card slide-up-tl fade-mob">
+                    <div class="slide-card">
+                        <div class="thumb">
+                            <img src="" alt="">
+                        </div>
+                        <div class="total">
+                            <div class="text">Media Booking</div>
+                            <div class="des">
+                                <p>
+                                    Mạng lưới booking phủ sóng rộng rãi trên các nền tảng mạng xã hội với hơn 150+ hot
+                                    fanpages / hot tiktok channels chất lượng với tổng 75M+ lượt người like/follow.
+                                </p>
+                                <p>
+                                    Kết nối mạng lưới KOL/KOC/Talent trên mọi lĩnh vực & độ tuổi.
+                                </p>
+                                <p>
+                                    Booking PR, OOH.
+                                </p>
+                            </div>
+                            <a href="javascript:;" class="contact-btn">Liên hệ với chúng tôi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-up-card slide-up-tl fade-mob">
+                    <div class="slide-card">
+                        <div class="thumb">
+                            <img src="" alt="">
+                        </div>
+                        <div class="total">
+                            <div class="text">Phát triển thương hiệu <br>
+                                cộng đồng
+                            </div>
+                            <div class="des">
+                                <p>
+                                    Tư vấn và đồng hành trong quá trình xây dựng & phát triển cộng đồng trên nền tảng
+                                    số.
+                                </p>
+                                <p>
+                                    Xây dựng kênh đa nền tảng Facebook - TikTok Quản trị kênh đa nền tảng.
+                                </p>
+                                <p>Performance Ads.</p>
+                            </div>
+                            <a href="javascript:;" class="contact-btn">Liên hệ với chúng tôi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-up-card slide-up-tl fade-mob">
+                    <div class="slide-card">
+                        <div class="thumb">
+                            <img src="" alt="">
+                        </div>
+                        <div class="total">
+                            <div class="text">Bảo trợ truyền thông</div>
+                            <div class="des">
+                                <p>
+                                    Tăng độ phủ, độ phổ biến và khả năng tiếp cận khán giả mới trên mạng xã hội.
+                                </p>
+                                <p>
+                                    Giúp nhãn hàng, cơ quan, tổ chức tăng được sự hiện diện và sự uy tín trên thị
+                                    trường.
+                                </p>
+                                <p>
+                                    Tối ưu hóa và sử dụng hiệu quả ngân sách truyền thông.
+                                </p>
+                            </div>
+                            <a href="javascript:;" class="contact-btn">Liên hệ với chúng tôi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-up-card slide-up-tl fade-mob">
+                    <div class="slide-card">
+                        <div class="thumb">
+                            <img src="" alt="">
+                        </div>
+                        <div class="total">
+                            <div class="text">Booking KOL</div>
+                            <div class="des">
+                                <p>Cung cấp giải pháp KOL Marketing chuyên nghiệp và hiệu quả.</p>
+                                <p>Booking quảng cáo với 100+ KOLs/Influencers thuộc nhiều lĩnh vực khác nhau trên đa
+                                    nền tảng.</p>
+                            </div>
+                            <a href="javascript:;" class="contact-btn">Liên hệ với chúng tôi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="beat-wrapper__partner" id="link-5">
+
+        <div class="pn-box">
+            <div class="heading">Đối tác BEAT Network</div>
+            <ul class="list-pn big">
+                <li>
+                    <a href="https://www.interstellar.marketing/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/interstellar.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://schannel.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/schannel.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://xanh.marketing/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/xanhmkt.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.vitaminagency.asia/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vitamin.webp" alt="">
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-pn ">
+                <li>
+                    <a href="https://breadntea.vn/?fbclid=IwAR2IflV_DvD43thCL-2TSQgDk1vCdzoS5HDNbtN_yPXZ_4V3qSiYdgBdmH8"
+                       class="pn-link" target="_blank">
+                        <img src="web_images/partner/breadntea.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://pencil.vn/?fbclid=IwAR1vWn1VnQyD0HSAF8rwIwy7Z--wfQ6NZhEdeR4s2IJbOCi2BmDXFovA9W8"
+                       class="pn-link" target="_blank">
+                        <img src="web_images/partner/pencil.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://sunbright.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/sunbright.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://any-digital.com/vi/vn/?fbclid=IwAR3b0dkNLgfvJp_Q2Tv8zepYkg3kR_41ygT215YCFm4aJ1xkMtUoVkwhzyw"
+                       class="pn-link" target="_blank">
+                        <img src="web_images/partner/adasia.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://metub.net/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/metub.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://blueagency.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/blueagency.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://ww38.minet.asia/?utm_source=brandsvietnam" class="pn-link" target="_blank">
+                        <img src="web_images/partner/minet.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.biz-eyes.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/bizeyes.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mog.net/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/mog.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://novaoncomm.com/ourwork.html?gclid=Cj0KCQjwj_ajBhCqARIsAA37s0wih_KIvthwh_-TvMc0aWQHUizsNbZI2-z0UfQJRYI-bvhtGcZOcJwaAuCwEALw_wcB"
+                       class="pn-link" target="_blank">
+                        <img src="web_images/partner/novaon.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://brainad.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/brainad.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.richmedia.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/richmedia.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.younetgroup.com/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/younet.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <div class="pn-link" target="_blank">
+                        <img src="web_images/partner/isobar.webp" alt="">
+                    </div>
+                </li>
+                <li>
+                    <a href="https://admicro.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/admicro.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.dentsu.com.vn/vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/dentsu.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://intecom.vtc.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vtc.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href=https://www.ogilvy.com/careers/4197345005"" class="pn-link" target="_blank">
+                        <img src="web_images/partner/tna.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://hiip.asia/?lang=vi" class="pn-link" target="_blank">
+                        <img src="web_images/partner/hiip.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://zeemedia.in/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/zeemedia.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://yeah1.com/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/yeah1.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://anymindgroup.com/vi/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/anymind.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href=https://mcv.com.vn/"" class="pn-link" target="_blank">
+                        <img src="web_images/partner/mcv.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://lifemedia.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/lifemedia.webp" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pn-box">
+            <div class="heading">Khách hàng</div>
+            <ul class="list-pn ">
+                <li>
+                    <a href="https://vingroup.net/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vingroup.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://fptshop.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/fpt.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://doanthanhnien.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/doanthanhnien.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.garena.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/garena.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tpb.vn/ca-nhan" class="pn-link" target="_blank">
+                        <img src="web_images/partner/tpbank.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://luckybest.vn/home" class="pn-link" target="_blank">
+                        <img src="web_images/partner/luckybest.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.masangroup.com/vi" class="pn-link" target="_blank">
+                        <img src="web_images/partner/masan.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://shopee.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/shopee.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://sungroup.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/sungroup.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.sony.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/sony.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.cgv.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/cgv.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://f88.vn/cam-do-nhanh-xe-may?utm_source=google.pgd&utm_medium=cpc&utm_campaign=google.paid.search_f88_vietnam&utm_campaignid=13435215296&utm_adgroupid=122824033386&gclid=Cj0KCQjwj_ajBhCqARIsAA37s0ysVlZSEriUqCiW3y10dBJb8FxTS--_x77St_EHqqWnQNTkfQSQVckaAj8REALw_wcB"
+                       class="pn-link" target="_blank">
+                        <img src="web_images/partner/f88.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.vpbank.com.vn/ca-nhan" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vpbank.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://cjhkentertainment.com/gioi-thieu/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/cjent.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vnpay.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vnpay.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://benhvienthucuc.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/thucuc.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://haichau.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/haichau.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.gapo.vn/login" class="pn-link" target="_blank">
+                        <img src="web_images/partner/gapo.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://lotte.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/lotte.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bkav.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/bkav.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bambooairways.com/vn-vi/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/bamboo.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vnpt.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vnpt.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://xor.inc/vi/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/xor.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.iq.com/?lang=vi_vn" class="pn-link" target="_blank">
+                        <img src="web_images/partner/iq.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://viettel.com.vn/vi/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/viettel.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://career.vng.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vng.webp" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="beat-wrapper__contact trigger-menu" id="link-6">
+        <div class="logo">
+            <svg width="400" height="111" viewBox="0 0 400 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_101_28)">
+                    <path d="M137.978 48.6583C141.123 51.4232 145.256 52.8763 150.055 52.8763C160.097 52.8763 167.96 44.5211 167.96 33.8449C167.96 23.1687 160.097 14.8134 150.055 14.8134C145.256 14.8134 141.103 16.2665 137.978 19.0314V0H129.489V51.8874H137.978V48.6583ZM148.866 22.4422C155.237 22.4422 159.693 27.1243 159.693 33.8449C159.693 40.5654 155.237 45.2274 148.866 45.2274C143.502 45.2274 137.978 40.9691 137.978 33.8449C137.978 26.7207 143.522 22.4422 148.866 22.4422Z"
+                          fill="white"/>
+                    <path d="M190.261 52.8765C198.568 52.8765 204.738 48.8402 207.622 41.5142L207.864 40.8684L200.202 39.2134L200 39.6171C198.044 43.5323 194.939 45.3487 190.241 45.3487C185.2 45.3487 181.208 41.5949 180.341 36.166H208.549V33.0378C208.207 22.6442 200.444 14.7935 190.523 14.7935C179.877 14.7935 171.852 23.0075 171.852 33.9056C171.852 44.8038 179.756 52.8765 190.241 52.8765M190.523 22.4424C195.161 22.4424 198.548 25.1871 199.718 29.8087H180.623C181.994 24.7633 186.632 22.4424 190.523 22.4424Z"
+                          fill="white"/>
+                    <path d="M230.245 52.8765C235.044 52.8765 239.198 51.4234 242.323 48.6585V51.8876H250.812V15.7824H242.323V19.0115C239.177 16.2465 235.044 14.7935 230.245 14.7935C220.204 14.7935 212.34 23.1487 212.34 33.8249C212.34 44.5011 220.204 52.8563 230.245 52.8563M231.435 22.4222C236.778 22.4222 242.323 26.6805 242.323 33.8249C242.323 40.9693 236.778 45.2074 231.435 45.2074C225.063 45.2074 220.607 40.5253 220.607 33.8249C220.607 27.1245 225.063 22.4222 231.435 22.4222Z"
+                          fill="white"/>
+                    <path d="M262.748 39.3948C262.748 47.9519 267.547 52.8763 275.935 52.8763C279.04 52.8763 281.561 52.1094 284.888 50.1114L285.311 49.8692L282.65 42.6037L282.045 43.0074C280.331 44.1174 278.193 44.8237 276.459 44.8237C273.112 44.8237 271.277 42.7248 271.277 38.9307V23.0274H283.254V15.8023H271.277V4.92432H262.789V15.7821H255.248V23.0072H262.789V39.3948H262.748Z"
+                          fill="white"/>
+                    <path d="M149.491 69.8696C144.833 69.8696 140.881 71.3833 137.958 74.2491V70.8585H129.469V106.964H137.958V90.2533C137.958 82.2209 141.446 77.8011 147.797 77.8011C152.495 77.8011 155.52 81.3127 155.52 86.7214V106.964H164.069V85.2482C164.069 76.1865 158.081 69.8696 149.491 69.8696Z"
+                          fill="white"/>
+                    <path d="M204.416 88.114C204.073 77.7204 196.31 69.8696 186.39 69.8696C175.744 69.8696 167.719 78.0836 167.719 88.9818C167.719 99.88 175.623 107.953 186.108 107.953C194.415 107.953 200.585 103.916 203.468 96.5903L203.71 95.9445L196.048 94.2896L195.846 94.6932C193.891 98.6085 190.785 100.425 186.087 100.425C181.026 100.425 177.054 96.6711 176.187 91.2422H204.396V88.114H204.416ZM176.49 84.8647C177.861 79.8193 182.498 77.4984 186.39 77.4984C191.027 77.4984 194.415 80.2229 195.584 84.8647H176.49Z"
+                          fill="white"/>
+                    <path d="M283.396 70.8583L275.854 93.9059L268.051 70.8583H261.458L253.655 93.9059L246.114 70.8583H222.482V60.0005H213.993V70.8583H206.452V78.0834H213.993V94.471C213.993 103.028 218.792 107.952 227.18 107.952C230.285 107.952 232.806 107.186 236.133 105.188L236.556 104.945L233.895 97.6799L233.29 98.0836C231.576 99.1936 229.438 99.8999 227.704 99.8999C224.357 99.8999 222.522 97.801 222.522 94.0068V78.1036H240.004L249.541 106.721L249.682 107.125H257.203L264.805 84.8241L272.407 107.125H279.927L292.005 70.8785H283.456L283.396 70.8583Z"
+                          fill="white"/>
+                    <path d="M310.414 70.0913C299.365 70.0913 291.037 78.1842 291.037 88.9209C291.037 99.6577 299.365 107.811 310.414 107.811C321.464 107.811 329.65 99.6778 329.65 88.9209C329.65 78.164 321.383 70.0913 310.414 70.0913ZM310.414 100.303C305.071 100.303 299.385 96.3075 299.385 88.9209C299.385 81.5344 305.071 77.5182 310.414 77.5182C317.27 77.5182 321.383 83.3104 321.383 88.9209C321.383 94.5315 317.29 100.303 310.414 100.303Z"
+                          fill="white"/>
+                    <path d="M355.177 70.4346C348.886 70.4346 344.894 73.704 342.454 76.9937V70.8584H333.965V106.964H342.454V94.0473C342.454 84.2389 346.95 78.8504 355.096 78.8504C356.709 78.8504 358.242 79.032 358.242 79.032V70.8786L357.798 70.7373C356.81 70.4346 356.044 70.4346 355.157 70.4346"
+                          fill="white"/>
+                    <path d="M378.99 88.3358L397.903 70.8583H386.833L372.276 84.0371H370.884V55.0762H362.416V106.964H370.884V92.4529H372.195L388.305 106.964H400L378.99 88.3358Z"
+                          fill="white"/>
+                    <path d="M72.608 31.5038C66.8413 31.2414 61.3368 32.2102 56.3363 34.1678C55.3482 34.5513 54.3602 33.6229 54.7232 32.6138L66.055 1.65491C66.3574 0.847636 65.7525 0 64.9057 0H39.4595C38.9353 0 38.4917 0.322909 38.3102 0.807272L0.0805805 105.309C-0.201706 106.116 0.38303 106.964 1.22989 106.964H26.676C27.2002 106.964 27.6438 106.641 27.8253 106.156L33.8945 89.587C34.2574 88.5981 35.6285 88.477 36.1124 89.4054C42.7462 101.716 55.7717 110.092 70.7127 110.092C92.4084 110.092 109.991 92.4932 109.991 70.7776C109.991 49.9298 93.3964 32.4725 72.608 31.5038ZM82.8712 74.713C78.0118 87.7101 65.813 95.4398 55.6305 91.9685C45.4481 88.477 41.1129 75.1167 45.9925 62.0994C50.8518 49.0821 63.0506 41.3727 73.2331 44.844C83.4156 48.3354 87.7507 61.6958 82.8712 74.713Z"
+                          fill="#EA0029"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_101_28">
+                        <rect width="400" height="110.092" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="info-contact">
+            <div class="heading">Listen to the beat of life</div>
+            <div class="ct-box">
+                <div class="type">Hotline</div>
+                <div class="text">
+                    <a href="tel:0868636996" class="ct-txt">0868 636 996</a>
+                </div>
+            </div>
+            <div class="ct-box">
+                <div class="type">Email</div>
+                <div class="text">
+                    <a href="mailto:ads@beat.vn" class="ct-txt">ads@beat.vn</a>
+                </div>
+            </div>
+            <div class="ct-box">
+                <div class="type">Fanpage</div>
+                <div class="text">
+                    <a href="https://www.facebook.com/beatnetwork.official" class="ct-txt" target="_blank">Beat
+                        Network</a>
+                </div>
+            </div>
+            <div class="ct-box">
+                <div class="type">Địa chỉ</div>
+                <div class="text">
+                    <div class="ct-txt">Hà Nội</div>
+                    <div class="ct-des">
+                        206-02, Tầng 2, Toà nhà N01A, <br>
+                        Golden Land, 275 Nguyễn Trãi, Thanh Xuân, Hà Nội
+
+                    </div>
+                </div>
+            </div>
+            <div class="ct-box">
+                <div class="type"></div>
+                <div class="text">
+                    <div class="ct-txt">Tp. Hồ Chí Minh</div>
+                    <div class="ct-des">27 Phó Đức Chính, Phường Nguyễn Thanh Bình, <br>
+                        Quận 1, Tp. HCM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="beat-wrapper__credit">All rights reserved by Beat Network</div>
+</div>
+<div class="popup-contact" id="popup-contact">
+    <div class="popup-backdrop"></div>
+    <div class="popup-content">
+        <div class="logo">
+            <svg width="200" height="56" viewBox="0 0 200 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_170_8864)">
+                    <path d="M68.9888 24.3292C70.5615 25.7116 72.6282 26.4382 75.0277 26.4382C80.0483 26.4382 83.9802 22.2605 83.9802 16.9224C83.9802 11.5844 80.0483 7.40672 75.0277 7.40672C72.6282 7.40672 70.5514 8.13327 68.9888 9.51572V0H64.7444V25.9437H68.9888V24.3292ZM74.4329 11.2211C77.6187 11.2211 79.8467 13.5622 79.8467 16.9224C79.8467 20.2827 77.6187 22.6137 74.4329 22.6137C71.7511 22.6137 68.9888 20.4845 68.9888 16.9224C68.9888 13.3604 71.7612 11.2211 74.4329 11.2211Z"
+                          fill="#111111"/>
+                    <path d="M95.1306 26.4381C99.2842 26.4381 102.369 24.42 103.811 20.757L103.932 20.4341L100.101 19.6066L100 19.8084C99.0221 21.7661 97.4695 22.6742 95.1205 22.6742C92.6001 22.6742 90.6039 20.7973 90.1704 18.0829H104.275V16.5188C104.103 11.322 100.222 7.39661 95.2616 7.39661C89.9385 7.39661 85.926 11.5036 85.926 16.9527C85.926 22.4018 89.878 26.4381 95.1205 26.4381M95.2616 11.2211C97.5804 11.2211 99.2741 12.5934 99.8589 14.9042H90.3115C90.9971 12.3815 93.3159 11.2211 95.2616 11.2211Z"
+                          fill="#111111"/>
+                    <path d="M115.122 26.4381C117.522 26.4381 119.599 25.7116 121.161 24.3291V25.9437H125.406V7.89106H121.161V9.50561C119.589 8.12315 117.522 7.39661 115.122 7.39661C110.102 7.39661 106.17 11.5742 106.17 16.9123C106.17 22.2504 110.102 26.4281 115.122 26.4281M115.717 11.211C118.389 11.211 121.161 13.3401 121.161 16.9123C121.161 20.4845 118.389 22.6036 115.717 22.6036C112.531 22.6036 110.303 20.2625 110.303 16.9123C110.303 13.5621 112.531 11.211 115.717 11.211Z"
+                          fill="#111111"/>
+                    <path d="M131.374 19.6974C131.374 23.976 133.774 26.4381 137.968 26.4381C139.52 26.4381 140.78 26.0547 142.444 25.0557L142.656 24.9346L141.325 21.3019L141.022 21.5037C140.165 22.0587 139.097 22.4119 138.23 22.4119C136.556 22.4119 135.639 21.3624 135.639 19.4653V11.5137H141.627V7.90115H135.639V2.46216H131.394V7.89106H127.624V11.5036H131.394V19.6974H131.374Z"
+                          fill="#111111"/>
+                    <path d="M74.7455 34.9347C72.4166 34.9347 70.4406 35.6915 68.9788 37.1244V35.4291H64.7344V53.4818H68.9788V45.1265C68.9788 41.1103 70.7229 38.9004 73.8986 38.9004C76.2476 38.9004 77.7599 40.6562 77.7599 43.3606V53.4818H82.0345V42.624C82.0345 38.0931 79.0403 34.9347 74.7455 34.9347Z"
+                          fill="#111111"/>
+                    <path d="M102.208 44.0569C102.037 38.8601 98.1552 34.9347 93.195 34.9347C87.8719 34.9347 83.8594 39.0417 83.8594 44.4908C83.8594 49.9399 87.8114 53.9762 93.0539 53.9762C97.2075 53.9762 100.292 51.958 101.734 48.295L101.855 47.9721L98.0241 47.1447L97.9233 47.3465C96.9454 49.3041 95.3928 50.2123 93.0438 50.2123C90.5133 50.2123 88.5272 48.3354 88.0937 45.621H102.198V44.0569H102.208ZM88.2449 42.4322C88.9304 39.9095 91.2492 38.7491 93.195 38.7491C95.5138 38.7491 97.2075 40.1113 97.7922 42.4322H88.2449Z"
+                          fill="#111111"/>
+                    <path d="M141.698 35.4292L137.927 46.953L134.026 35.4292H130.729L126.827 46.953L123.057 35.4292H111.241V30.0002H106.997V35.4292H103.226V39.0417H106.997V47.2355C106.997 51.5141 109.396 53.9762 113.59 53.9762C115.143 53.9762 116.403 53.5928 118.066 52.5938L118.278 52.4727L116.947 48.84L116.645 49.0418C115.788 49.5968 114.719 49.95 113.852 49.95C112.179 49.95 111.261 48.9005 111.261 47.0034V39.0518H120.002L124.771 53.3607L124.841 53.5625H128.602L132.402 42.4121L136.203 53.5625H139.964L146.003 35.4392H141.728L141.698 35.4292Z"
+                          fill="#111111"/>
+                    <path d="M155.207 35.0457C149.683 35.0457 145.519 39.0922 145.519 44.4605C145.519 49.8289 149.683 53.9056 155.207 53.9056C160.732 53.9056 164.825 49.839 164.825 44.4605C164.825 39.0821 160.692 35.0457 155.207 35.0457ZM155.207 50.1518C152.536 50.1518 149.693 48.1538 149.693 44.4605C149.693 40.7673 152.536 38.7592 155.207 38.7592C158.635 38.7592 160.692 41.6553 160.692 44.4605C160.692 47.2658 158.645 50.1518 155.207 50.1518Z"
+                          fill="#111111"/>
+                    <path d="M177.589 35.2172C174.443 35.2172 172.447 36.852 171.227 38.4968V35.4291H166.983V53.4818H171.227V47.0236C171.227 42.1194 173.475 39.4251 177.548 39.4251C178.355 39.4251 179.121 39.5159 179.121 39.5159V35.4392L178.899 35.3686C178.405 35.2172 178.022 35.2172 177.578 35.2172"
+                          fill="#111111"/>
+                    <path d="M189.495 44.1679L198.951 35.4292H193.417L186.138 42.0185H185.442V27.5381H181.208V53.4818H185.442V46.2264H186.097L194.153 53.4818H200L189.495 44.1679Z"
+                          fill="#111111"/>
+                    <path d="M36.304 15.7519C33.4207 15.6207 30.6684 16.1051 28.1681 17.0839C27.6741 17.2756 27.1801 16.8114 27.3616 16.3069L33.0275 0.827454C33.1787 0.423818 32.8763 0 32.4528 0H19.7298C19.4677 0 19.2459 0.161454 19.1551 0.403636L0.0402903 52.6543C-0.100853 53.058 0.191515 53.4818 0.614945 53.4818H13.338C13.6001 53.4818 13.8219 53.3203 13.9127 53.0781L16.9472 44.7935C17.1287 44.2991 17.8143 44.2385 18.0562 44.7027C21.3731 50.8581 27.8858 55.0459 35.3563 55.0459C46.2042 55.0459 54.9954 46.2466 54.9954 35.3888C54.9954 24.9649 46.6982 16.2363 36.304 15.7519ZM41.4356 37.3565C39.0059 43.8551 32.9065 47.7199 27.8153 45.9842C22.724 44.2385 20.5565 37.5583 22.9962 31.0497C25.4259 24.5411 31.5253 20.6863 36.6166 22.422C41.7078 24.1677 43.8754 30.8479 41.4356 37.3565Z"
+                          fill="#EA0029"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_170_8864">
+                        <rect width="200" height="55.0459" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <a href="javascript:;" class="close-popup">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 5L5 19" stroke="#111111" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="square"/>
+                <path d="M19 19L5 5" stroke="#111111" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="square"/>
+            </svg>
+
+        </a>
+        <div class="heading">Liên hệ <br>
+            với chúng tôi
+        </div>
+        <div class="list-contact">
+            <div class="ct-type">
+                <div class="type">Hotline</div>
+                <a href="tel:0868636996" class="txt">0868 636 996</a>
+            </div>
+            <div class="ct-type">
+                <div class="type">Email</div>
+                <a href="mailto:ads@beat.vn" class="txt">ads@beat.vn</a>
+            </div>
+            <div class="ct-type">
+                <div class="type">Fanpage</div>
+                <a href="" class="txt" target="_blank">Beat Network</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

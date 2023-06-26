@@ -17,8 +17,9 @@
 
     .videoBox {
       width: 100%;
-      height: 120%;
-
+      height: 100%;
+      position: relative;
+      z-index: 2;
     }
 
     .bg-img {
@@ -43,42 +44,54 @@
       display: block;
       object-fit: cover;
       height: 100%;
-      position: relative;
-      z-index: 2;
+
+    }
+
+    .text-bottom {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 3;
+      padding: 1vw 2.1vw 1.2vw;
+
+      .heading {
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+      }
+
+      .title {
+        width: 56.2vw;
+        font-size: 10vw;
+        flex-shrink: 0;
+        line-height: 110%;
+        font-family: PlusJaS-ExtraBold;
+        letter-spacing: -0.04em;
+        color: #111111;
+        flex-shrink: 0;
+      }
+
+      .des {
+        padding-top: 2.5vw;
+        font-size: 1.9vw;
+        line-height: 110%;
+        font-family: PlusJaS-Medium;
+        letter-spacing: -0.01em;
+        color: #111111;
+        flex-grow: 1;
+      }
+
+      background: var(--colorRed);
     }
   }
 
   &__text-long {
+    margin-top: -2px;
     background: var(--colorRed);
     padding: 1vw 2.1vw 30vw;
 
-    .heading {
-      display: flex;
-      align-items: center;
-      gap: 2vw;
-      margin-bottom: 4vw;
-    }
-
-    .title {
-      width: 56.2vw;
-      font-size: 10vw;
-      flex-shrink: 0;
-      line-height: 110%;
-      font-family: PlusJaS-ExtraBold;
-      letter-spacing: -0.04em;
-      color: #111111;
-      flex-shrink: 0;
-    }
-
-    .des {
-      padding-top: 2.5vw;
-      font-size: 1.9vw;
-      line-height: 110%;
-      font-family: PlusJaS-Medium;
-      letter-spacing: -0.01em;
-      color: #111111;
-      flex-grow: 1;
-    }
 
     .content {
       width: 55.05vw;
@@ -391,6 +404,10 @@
     .marquee-item {
       display: inline-flex;
       padding: 0 7vh;
+    }
+
+    .icn-tiktok {
+      display: none;
     }
 
     .kol-item {
@@ -1116,7 +1133,7 @@
 @media screen and (max-width: 768px) {
   .beat-wrapper {
     &__cover {
-      height: 120vw;
+      height: 180vw;
 
       .beat-logo {
         width: 130px;
@@ -1133,28 +1150,33 @@
       video {
 
       }
+
+      .text-bottom {
+        padding: 9px 17px;
+
+        .heading {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 34px;
+          margin-bottom: 34px;
+        }
+
+        .title {
+          width: 100%;
+          font-size: 60px;
+        }
+
+        .des {
+          font-size: 24px;
+          padding: 0;
+        }
+      }
     }
 
     &__text-long {
 
       padding: 9px 17px 40vw;
 
-      .heading {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 34px;
-        margin-bottom: 34px;
-      }
-
-      .title {
-        width: 100%;
-        font-size: 60px;
-      }
-
-      .des {
-        font-size: 24px;
-        padding: 0;
-      }
 
       .content {
         width: 100%;
@@ -1349,6 +1371,7 @@
 
       .mcn-kol {
         height: auto;
+        overflow: unset;
       }
 
       .marquee-box {
@@ -1358,6 +1381,30 @@
       .marquee-item {
         padding: 0;
         display: block;
+        position: relative;
+      }
+
+      .icn-tiktok {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        z-index: 1;
+
+        .icon-tt {
+          position: sticky;
+          top: 44vw;
+          left: 0;
+          width: 100%;
+        }
+
+        .icn-bg {
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
       }
 
       .kol-item {
@@ -1405,6 +1452,8 @@
         display: flex;
         flex-direction: column;
         gap: 14.93vw;
+        position: relative;
+        z-index: 2;
 
         li {
           display: flex;
@@ -1554,7 +1603,7 @@
           height: 304.5px;
 
           &:hover {
-            transform: rotate3d(0, 1, 0, 35deg);
+            transform: unset;
           }
         }
 
