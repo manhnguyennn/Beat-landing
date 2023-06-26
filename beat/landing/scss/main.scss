@@ -9,6 +9,36 @@ body {
   --colorBlack: #101820;
   --colorWhite: #FFFFFF;
 
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 0;
+    background: transparent;
+    border: none;
+
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 0 0 0;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    box-shadow:none;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.45)
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.85)
+  }
+
   &.loading-body {
     width: 100vw;
     height: 100vh;

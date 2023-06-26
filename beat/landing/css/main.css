@@ -1613,6 +1613,30 @@ body {
   --colorBlack: #101820;
   --colorWhite: #FFFFFF;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+  background: transparent;
+  border: none;
+}
+body::-webkit-scrollbar-track {
+  margin: 0 0 0;
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+}
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+}
+body:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.45);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
 body.loading-body {
   width: 100vw;
   height: 100vh;
