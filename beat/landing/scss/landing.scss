@@ -20,31 +20,32 @@
       height: 100%;
       position: relative;
       z-index: 2;
-    }
 
-    .bg-img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-
-      img {
+      .bg-img {
         width: 100%;
         height: 100%;
         display: block;
-        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
       }
     }
+
 
     video {
       width: 100%;
       display: block;
       object-fit: cover;
       height: 100%;
-
+      position: relative;
     }
 
     .text-bottom {
@@ -90,7 +91,7 @@
   &__text-long {
     margin-top: -2px;
     background: var(--colorRed);
-    padding: 1vw 2.1vw 30vw;
+    padding: 1vw 2.1vw 20vw;
 
 
     .content {

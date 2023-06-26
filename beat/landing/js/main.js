@@ -5,23 +5,45 @@ $(document).ready(function () {
 
     function allFunc() {
         const videoElement = document.getElementsByClassName('video-init');
+        var chkPlayVideo = false;
         checkCallVideo();
         //console.log(videoElement.length);
         function checkCallVideo() {
             for (let i = 0; i < videoElement.length; i++) {
+
                 videoElement[i].addEventListener('suspend', () => {
                     //console.log("suspend");
                 });
                 videoElement[i].addEventListener('play', () => {
                     //$("#testlowmode").html("play");
                     //console.log("play");
-                    var parentBoxVideo = videoElement[i].parentNode;
-                    parentBoxVideo.removeChild(parentBoxVideo.getElementsByClassName('bg-img')[0]);
-                    videoElement[i].classList.remove("hidden-video");
+                    try {
+                        var parentBoxVideo = videoElement[i].parentNode;
+                        parentBoxVideo.removeChild(parentBoxVideo.getElementsByClassName('bg-img')[0]);
+                        videoElement[i].classList.remove("hidden-video");
+                    }
+                    catch (err) {
+
+                    }
+                    chkPlayVideo = true;
                 });
+                setInterval(checkPlayVideo, 1000);
+                function checkPlayVideo() {
+                    if (chkPlayVideo == true) {
+                        try {
+                            var parentBoxVideo = videoElement[i].parentNode;
+                            parentBoxVideo.removeChild(parentBoxVideo.getElementsByClassName('bg-img')[0]);
+                            videoElement[i].classList.remove("hidden-video");
+                        }
+                        catch (err) {
+
+                        }
+                        chkPlayVideo = false;
+                        console.log("video dang chay");
+                    }
+                }
             }
         }
-
 
         gsap.fromTo('.videoBox', {
             yPercent: -10,
@@ -297,7 +319,7 @@ $(document).ready(function () {
 
 
             gsap.fromTo('.beat-wrapper__info .info-numb', {
-                y: -offsetX / 1.2,
+                y: - offsetX / 15,
                 scale: 0.96,
             }, {
                 scale: 1,
@@ -305,8 +327,8 @@ $(document).ready(function () {
                 ease: 'easeOutIn',
                 scrollTrigger: {
                     trigger: '.beat-wrapper__info .info-numb',
-                    start: '+=' + offsetX / 5 + ' bottom',
-                    end: '+=' + offsetX * 1.5 + 'top',
+                    start: '+=' + offsetX / 2 + ' bottom',
+                    end: '+=' + offsetX * 1.02 + 'top',
                     scrub: true,
                     toggleActions: "play none none none",
                     // duration: 3000,
