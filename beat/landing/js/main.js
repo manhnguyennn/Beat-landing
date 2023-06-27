@@ -45,20 +45,20 @@ $(document).ready(function () {
             }
         }
 
-        gsap.fromTo('.videoBox', {
-            yPercent: -10,
-        }, {
-            yPercent: 0,
-            ease: 'easeOutIn',
-            scrollTrigger: {
-                trigger: 'videoBox',
-                start: 'top top',
-                end: '+=100%',
-                scrub: true,
-                // toggleActions: "play none none none",
-                // duration: 3000,
-            }
-        });
+        // gsap.fromTo('.videoBox', {
+        //     yPercent: -10,
+        // }, {
+        //     yPercent: 0,
+        //     ease: 'easeOutIn',
+        //     scrollTrigger: {
+        //         trigger: 'videoBox',
+        //         start: 'top top',
+        //         end: '+=100%',
+        //         scrub: true,
+        //         // toggleActions: "play none none none",
+        //         // duration: 3000,
+        //     }
+        // });
 
 
         const swiper = new Swiper('.swiper-text', {
