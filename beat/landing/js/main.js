@@ -2,11 +2,11 @@ $(document).ready(function () {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
-
     function allFunc() {
         const videoElement = document.getElementsByClassName('video-init');
         var chkPlayVideo = false;
         checkCallVideo();
+
         //console.log(videoElement.length);
         function checkCallVideo() {
             for (let i = 0; i < videoElement.length; i++) {
@@ -21,21 +21,20 @@ $(document).ready(function () {
                         var parentBoxVideo = videoElement[i].parentNode;
                         parentBoxVideo.removeChild(parentBoxVideo.getElementsByClassName('bg-img')[0]);
                         videoElement[i].classList.remove("hidden-video");
-                    }
-                    catch (err) {
+                    } catch (err) {
 
                     }
                     chkPlayVideo = true;
                 });
                 setInterval(checkPlayVideo, 1000);
+
                 function checkPlayVideo() {
                     if (chkPlayVideo == true) {
                         try {
                             var parentBoxVideo = videoElement[i].parentNode;
                             parentBoxVideo.removeChild(parentBoxVideo.getElementsByClassName('bg-img')[0]);
                             videoElement[i].classList.remove("hidden-video");
-                        }
-                        catch (err) {
+                        } catch (err) {
 
                         }
                         chkPlayVideo = false;
@@ -157,26 +156,6 @@ $(document).ready(function () {
         let vW = window.innerWidth / 100;
         let offsetX = 20 * vW;
 
-
-        gsap.utils.toArray(".animCounter").forEach(box => {
-            var tler = gsap.from(box, {
-                textContent: "0",
-                duration: 2,
-                ease: "power1.inOut",
-                modifiers: {
-                    textContent: value => formatNumber(value, 0)
-                },
-                scrollTrigger: {
-                    trigger: box,
-                    start: '+=' + offsetX / 5 + ' bottom',
-                    end: '+=' + offsetX * 1.5 + 'top',
-                    toggleActions: "play none none none",
-
-                }
-            });
-        })
-
-
         function formatNumber(value, decimals) {
             let s = (+value).toLocaleString('en-US').split(".");
             return decimals ? s[0] + "." + ((s[1] || "") + "00000000").substr(0, decimals) : s[0];
@@ -184,7 +163,21 @@ $(document).ready(function () {
 
         tl = gsap.timeline({paused: true});
 
-
+        gsap.utils.toArray(".animCounter").forEach(box => {
+            var tler = gsap.from(box, {
+                textContent: "0",
+                duration: 5,
+                ease: "power1.inOut",
+                modifiers: {
+                    textContent: value => formatNumber(value, 0)
+                },
+                scrollTrigger: {
+                    trigger: '.beat-wrapper__info .info-numb',
+                    start: 'top bottom',
+                    // end: '+=' + offsetX * 1.02 + 'top',
+                }
+            });
+        })
 
 
         let me = $(window).width();
@@ -317,9 +310,16 @@ $(document).ready(function () {
             })
 
 
+            $('.menu-content .logo').click(function () {
+                gsap.to(window, {duration: 2, scrollTo: 0});
+                $('.menu-expand').removeClass('active');
+                smoother.paused(false);
+                $('.src-btn').removeClass('active');
+            })
+
 
             gsap.fromTo('.beat-wrapper__info .info-numb', {
-                y: - offsetX / 15,
+                y: -offsetX / 20,
                 scale: 0.96,
             }, {
                 scale: 1,
@@ -327,7 +327,7 @@ $(document).ready(function () {
                 ease: 'easeOutIn',
                 scrollTrigger: {
                     trigger: '.beat-wrapper__info .info-numb',
-                    start: '+=' + offsetX / 2 + ' bottom',
+                    start: '+=' + -offsetX / 20 + ' bottom',
                     end: '+=' + offsetX * 1.02 + 'top',
                     scrub: true,
                     toggleActions: "play none none none",
@@ -508,6 +508,12 @@ $(document).ready(function () {
                 $('.popup-contact').removeClass('active');
             })
 
+            $('.menu-content .logo').click(function () {
+                gsap.to(window, {duration: 2, scrollTo: 0});
+                $('.menu-expand').removeClass('active');
+                $('.src-btn').removeClass('active');
+            })
+
             // document.querySelectorAll(".list-nav .nav-link").forEach((btn, index) => {
             //     btn.addEventListener("click", () => {
             //         gsap.to(window, {duration: 2, scrollTo: {y: "#link-" + (index + 1), offsetY: 0}});
@@ -580,7 +586,7 @@ $(document).ready(function () {
         allFunc();
         setTimeout(function () {
             $('.loading-wrap').removeClass('loading')
-        }, 300);
+        }, 500);
 
 
     });

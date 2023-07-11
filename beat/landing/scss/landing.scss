@@ -1,8 +1,9 @@
 .beat-wrapper {
   &__cover {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100vh;
-    position: relative;
     overflow: hidden;
 
     .beat-logo {
@@ -55,7 +56,7 @@
       box-sizing: border-box;
       position: absolute;
       z-index: 3;
-      padding: 1vw 2.1vw 1.2vw;
+      padding: 1vw 2.1vw 1.1vw;
 
       .heading {
         display: flex;
@@ -89,6 +90,8 @@
   }
 
   &__text-long {
+    position: relative;
+    z-index: 2;
     margin-top: -2px;
     background: var(--colorRed);
     padding: 1vw 2.1vw 20vw;
@@ -116,6 +119,7 @@
     background-repeat: no-repeat;
     position: relative;
     box-sizing: border-box;
+    z-index: 3;
 
     .info-numb {
       position: absolute;
@@ -482,7 +486,7 @@
 
     .mcn-box {
       display: inline-grid;
-      grid-template-columns: repeat(48, 9.74vh);
+      grid-template-columns: repeat(55, 9.74vh);
       grid-template-rows: repeat(6, 9.74vh);
       //grid-template-rows: 12.74vh;
       height: 100%;
@@ -567,6 +571,14 @@
           }
         }
 
+        &:nth-child(9) {
+          grid-column: 50/54;
+          grid-row: 2/7;
+
+          .total {
+            bottom: 3vh;
+          }
+        }
 
       }
     }
@@ -646,21 +658,22 @@
 
           .bk-left {
 
-
-            h2 {
+            .h2 {
               background: #000000;
+
+              span {
+                &:first-child {
+                  color: #ED6C97;
+                }
+
+                &:last-child {
+                  color: #FFFFFF;
+
+                }
+              }
             }
 
-            span {
-              &:first-child {
-                color: #ED6C97;
-              }
 
-              &:last-child {
-                color: #FFFFFF;
-
-              }
-            }
           }
         }
 
@@ -672,20 +685,22 @@
           .bk-left {
 
 
-            h2 {
+            .h2 {
               background: #26B6BF;
+
+              span {
+                &:first-child {
+                  color: #fff;
+                }
+
+                &:last-child {
+                  color: #FFFFFF;
+
+                }
+              }
             }
 
-            span {
-              &:first-child {
-                color: #fff;
-              }
 
-              &:last-child {
-                color: #FFFFFF;
-
-              }
-            }
           }
         }
       }
@@ -696,6 +711,7 @@
         height: 25vw;
         transform-style: preserve-3d;
         transition: transform .5s;
+        display: block;
 
         &:hover {
           transform: rotate3d(0, 1, 0, 35deg);
@@ -773,7 +789,7 @@
         width: 2.3vw;
         left: -1.15vw;
 
-        h2 {
+        .h2 {
           background: #FFFFFF;
           display: flex;
           justify-content: space-between;
@@ -784,28 +800,32 @@
           transform: rotate(90deg) translateY(-2.3vw);
           padding: 0.72vw;
           box-sizing: border-box;
+
+          span {
+            display: block;
+
+            &:first-child {
+              font-size: 1.1vw;
+              line-height: 110%;
+              /* identical to box height, or 24px */
+              font-family: PlusJaS-Regular;
+              letter-spacing: -0.01em;
+              color: #111111;
+            }
+
+            &:last-child {
+              font-size: 1.1vw;
+              line-height: 110%;
+              /* identical to box height, or 24px */
+              font-family: PlusJaS-Bold;
+              letter-spacing: -0.01em;
+              color: #111111;
+
+            }
+          }
         }
 
-        span {
-          &:first-child {
-            font-size: 1.1vw;
-            line-height: 110%;
-            /* identical to box height, or 24px */
-            font-family: PlusJaS-Regular;
-            letter-spacing: -0.01em;
-            color: #111111;
-          }
 
-          &:last-child {
-            font-size: 1.1vw;
-            line-height: 110%;
-            /* identical to box height, or 24px */
-            font-family: PlusJaS-Bold;
-            letter-spacing: -0.01em;
-            color: #111111;
-
-          }
-        }
       }
 
       .bk-back {
@@ -884,14 +904,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
     }
 
     .slide-card {
+      border: 2px solid #333;
       width: 83.64vw;
-      background: #EA0029;
-      height: 75vh;
-      border: 2px solid #111111;
       border-radius: 15px;
+      background: #EEE;
+      height: 75vh;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -977,7 +998,7 @@
         align-items: flex-start;
         padding: 15px 20px;
         gap: 10px;
-        background: #EA0029;
+        background: #eee;
         border: 2px solid #111111;
         border-radius: 10px;
       }
@@ -1069,6 +1090,9 @@
       margin-bottom: 2.44vw;
       color: #FFFFFF;
 
+      br {
+        display: none;
+      }
     }
 
     .ct-box {
@@ -1096,6 +1120,9 @@
       font-size: 22px;
       line-height: 140%;
       /* identical to box height, or 31px */
+      &:hover {
+        opacity: 0.9;
+      }
 
       letter-spacing: -0.01em;
       font-family: PlusJaS-Medium;
@@ -1134,7 +1161,7 @@
 @media screen and (max-width: 768px) {
   .beat-wrapper {
     &__cover {
-      height: 180vw;
+      height: auto;
 
       .beat-logo {
         width: 130px;
@@ -1149,11 +1176,14 @@
       }
 
       video {
-
+        height: 120vw;
       }
 
       .text-bottom {
         padding: 9px 17px;
+        position: relative;
+        bottom: auto;
+        left: auto;
 
         .heading {
           flex-direction: column;
@@ -1182,6 +1212,7 @@
       .content {
         width: 100%;
         font-size: 20px;
+        line-height: 140%;
       }
     }
 
@@ -1648,22 +1679,24 @@
           width: 30px;
           left: -16px;
 
-          h2 {
+          .h2 {
             transform: rotate(90deg) translateY(-30.5px);
             width: 304.5px;
             height: 30px;
+
+            span {
+              &:first-child {
+                font-size: 14px;
+              }
+
+              &:last-child {
+                font-size: 14px;
+
+              }
+            }
           }
 
-          span {
-            &:first-child {
-              font-size: 14px;
-            }
 
-            &:last-child {
-              font-size: 14px;
-
-            }
-          }
         }
 
         .bk-back {
@@ -1723,8 +1756,9 @@
 
       .slide-card {
         width: 100%;
+        border: 1.5px solid #333;
+
         flex-direction: column;
-        border: 1px solid #111111;
         gap: 0;
         padding: 0;
         height: auto;

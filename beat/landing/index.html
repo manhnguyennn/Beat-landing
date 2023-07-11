@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beat Network</title>
-
+    <title>BEAT Network - Listen to the beat of life </title>
+    <meta property="og:title" content="BEAT Network - Listen to the beat of life"/>
+    <meta property="og:description"
+          content="BEAT Network mang tới một hệ sinh thái sản phẩm phong phú, trải dài các mảng nội dung, cộng đồng góp phần vào sự phát triển mạnh mẽ của truyền thông internet tại Việt nam."/>
+    <meta name="description"
+          content="BEAT Network mang tới một hệ sinh thái sản phẩm phong phú, trải dài các mảng nội dung, cộng đồng góp phần vào sự phát triển mạnh mẽ của truyền thông internet tại Việt nam."/>
+    <meta property="og:image" content="web_images/thumb-share.webp"/>
+    <meta property="og:url" content="https://beatnetwork.vn/"/>
+    <meta property="og:image:width" content="1000"/>
+    <meta property="og:image:height" content="522"/>
+    <meta property="og:type" content="website"/>
     <link rel="icon" type="image/x-icon" href="web_images/favicon.png">
+
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/splitting.css">
@@ -26,13 +36,25 @@
 </head>
 <body class="loading-body">
 <div class="loading-wrap loading">
-    <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
+    <!-- Loader -->
+    <div class="blobs">
+        <div class="blob-center"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
 </div>
 <div class="src-btn">
     <i>
@@ -57,6 +79,7 @@
 
     </i>
 </div>
+
 <div class="menu-expand">
     <div class="backdrop-menu"></div>
     <div class="menu-content">
@@ -115,7 +138,7 @@
                 </li>
             </ul>
             <div class="socials-box">
-                <a href="#" class="socials-link" target="_blank">
+                <a href="https://www.facebook.com/beatnetwork.official" class="socials-link" target="_blank">
                         <span class="icn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +149,7 @@
                         </span>
                     <span class="txt">Facebok</span>
                 </a>
-                <a href="#" class="socials-link" target="_blank">
+                <a href="https://www.tiktok.com/@beatvn_official" class="socials-link" target="_blank">
                         <span class="icn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -178,10 +201,10 @@
             </svg>
         </div>
         <div class="videoBox">
-            <video src="web_images/BNW-03.mp4" playsinline preload
+            <video src="web_images/cover-top.mp4" poster="web_images/cover-top.webp" playsinline preload
                    autoplay muted loop class="video-init hidden-video"></video>
             <div class="bg-img">
-                <img src="" alt="">
+                <img src="web_images/cover-top.webp" alt="">
             </div>
         </div>
 
@@ -197,18 +220,23 @@
     <div class="beat-wrapper__text-long">
 
         <div class="content">
-            <h2 class="content__title" data-splitting data-effect16>
-                BEAT Network sở hữu hệ thống truyền thông mạng xã hội đa nền tảng, đa kênh, chủ đề nội dung phong
-                phú và sáng tạo với 70+ kênh cùng 63+ triệu người theo dõi và 3+ tỷ lượt tiếp cận hàng tháng giúp
-                doanh nghiệp, thương hiệu, sản phẩm tiếp cận rộng rãi với người tiêu dùng một cách nhanh chóng và
-                hiệu quả.
+            <h2 class="fade-web fade-mob">
+                BEAT Network sở hữu hệ thống truyền thông mạng xã hội đa nền tảng, đa kênh, chủ đề nội dung phong phú và
+                sáng tạo với 70+ kênh cùng 63+ triệu người theo dõi và 3+ tỷ lượt tiếp cận hàng tháng giúp doanh nghiệp,
+                thương hiệu, sản phẩm tiếp cận rộng rãi với người tiêu dùng một cách nhanh chóng và hiệu quả.
+                <br> <br>
+
+
             </h2>
+            <h2 class="fade-web fade-mob"> BEAT Network cung cấp dịch vụ truyền thông qua các nền tảng mạng xã hội từ
+                quảng cáo, phát triển thương
+                hiệu cộng đồng và tư vấn, thực thi chiến lược đa kênh, giúp tối ưu chi phí cho khách hàng.</h2>
         </div>
     </div>
     <div class="beat-wrapper__info" id="link-1">
         <div class="info-numb">
             <div class="heading">
-                <div class="text">Một BEAT Netwok</div>
+                <div class="text">Một BEAT Network</div>
                 <div class="swiper swiper-text">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -238,7 +266,7 @@
                 <div class="count-box">
                     <div class="numb-flx">
                         <div class="animCounter">70</div>
-                        <div class="plus">+</div>
+                        <div class="plus"><span>+</span></div>
                     </div>
                     <div class="txt">Channel</div>
                 </div>
@@ -263,10 +291,10 @@
                 <div class="info-box reveal fade-mob">
                     <div class="heading">
                         Hệ sinh thái <br>
-                        Beat Network
+                        BEAT Network
                     </div>
                     <div class="des">
-                        Với 16 sản phẩm mạng xã hội, BEAT Network mang tới một hệ sinh thái phong phú, trải dài các mảng
+                        BEAT Network mang tới một hệ sinh thái phong phú, trải dài các mảng
                         nội dung, cộng đồng góp phần vào sự phát triển mạnh mẽ của truyền thông internet tại Việt nam.
                     </div>
                 </div>
@@ -664,9 +692,9 @@
                     <li>
                         <a href="https://www.facebook.com/groups/997347030413099" class="network reveal"
                            target="_blank">
-                            <span class="stt">16</span>
+                            <span class="stt">17</span>
                             <span class="thumb">
-                            <img src="web_images/logo/Drama.webp" alt="">
+                            <img src="web_images/logo/hnxin.webp" alt="">
                         </span>
                             <span class="name">Hà Nội Xịn!!!</span>
                             <span class="des">
@@ -844,14 +872,15 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/" class="kol-item fade-mob" target="_blank">
+                                <a href="https://www.tiktok.com/@daddyk.offcial?_t=8dUcnHZlGza&_r=1"
+                                   class="kol-item fade-mob" target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/dvhaianh.webp" alt="">
                         </span>
                                     <span class="total">
                             <span class="info-kol">
                                  <span class="name">DV. Nguyễn Hải Anh</span>
-                                 <span class="count"></span>
+                                 <span class="count">115.000 Followers</span>
                             </span>
                             <span class="icn">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -864,14 +893,36 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/" class="kol-item fade-mob" target="_blank">
+                                <a href="https://www.tiktok.com/@thaimanhthang" class="kol-item fade-mob"
+                                   target="_blank">
                         <span class="thumb">
                             <img src="web_images/kol/mcthaimanhthang.webp" alt="">
                         </span>
                                     <span class="total">
                             <span class="info-kol">
                                  <span class="name">MC. Thái Mạnh Thắng</span>
-                                 <span class="count"></span>
+                                 <span class="count">355 Followers</span>
+                            </span>
+                            <span class="icn">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7361 11.1713V16.3237C12.0872 16.1526 11.4082 16.1293 10.749 16.2555C10.0899 16.3817 9.46749 16.6542 8.92769 17.0529C8.38788 17.4517 7.94444 17.9665 7.63005 18.5594C7.31565 19.1523 7.13832 19.8082 7.11113 20.4787C7.07396 21.0561 7.16084 21.6347 7.36592 22.1757C7.571 22.7166 7.88953 23.2074 8.3001 23.615C8.71066 24.0226 9.20374 24.3376 9.74617 24.5387C10.2886 24.7399 10.8678 24.8226 11.4449 24.7812C12.0278 24.826 12.6134 24.7436 13.1614 24.5398C13.7093 24.3361 14.2065 24.0158 14.6186 23.6011C15.0307 23.1864 15.3478 22.6872 15.5481 22.138C15.7484 21.5888 15.827 21.0026 15.7786 20.42V0H20.8749C21.7411 5.39375 24.4386 6.645 28.0499 7.2225V12.3913C25.5473 12.186 23.1331 11.3706 21.0186 10.0162V20.225C21.0186 24.85 18.2811 30 11.4849 30C10.2098 29.9944 8.94873 29.7344 7.77549 29.2351C6.60224 28.7358 5.54048 28.0073 4.65242 27.0924C3.76436 26.1774 3.06789 25.0944 2.60382 23.9068C2.13975 22.7192 1.91743 21.4509 1.94988 20.1763C1.99026 18.8492 2.31145 17.5458 2.89227 16.3519C3.47308 15.1581 4.30034 14.1009 5.31951 13.25C6.33868 12.3991 7.52661 11.7739 8.805 11.4156C10.0834 11.0573 11.4232 10.974 12.7361 11.1713Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@ducanh94?lang=vi-VN" class="kol-item fade-mob"
+                                   target="_blank">
+                        <span class="thumb">
+                            <img src="web_images/kol/ducanh.webp" alt="">
+                        </span>
+                                    <span class="total">
+                            <span class="info-kol">
+                                 <span class="name">Đức Anh (Thánh đột nhập)</span>
+                                 <span class="count">6.200.000 Followers</span>
                             </span>
                             <span class="icn">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -933,53 +984,56 @@
         </div>
         <ul class="list-cover">
             <li>
-                <div class="bk-book book-1 ">
-                    <div class="bk-front">
-                        <div class="bk-cover">
-                        </div>
-                    </div>
+                <a href="https://drive.google.com/file/d/1OPyxZI3pOjKQiEndU11rIIxkIiHlFW8z/view" target="_blank"
+                   class="bk-book book-1 ">
+                    <span class="bk-front">
+                        <span class="bk-cover">
+                        </span>
+                    </span>
 
 
-                    <div class="bk-left">
-                        <h2>
+                    <span class="bk-left">
+                        <span class="h2">
                             <span>Vol.1</span>
                             <span>SOCIAL TRENDS</span>
-                        </h2>
-                    </div>
+                        </span>
+                    </span>
 
-                    <div class="bk-back"></div>
-                </div>
+                    <span class="bk-back"></span>
+                </a>
             </li>
             <li>
-                <div class="bk-book book-2 ">
-                    <div class="bk-front">
-                        <div class="bk-cover">
-                        </div>
-                    </div>
+                <a href="https://drive.google.com/file/d/1FTRA-qI4dzsm-c36Ap7KcJMWgCnIKxXM/view?usp=share_link"
+                   target="_blank" class="bk-book book-2 ">
+                    <span class="bk-front">
+                        <span class="bk-cover">
+                        </span>
+                    </span>
 
 
-                    <div class="bk-left">
-                        <h2>
+                    <span class="bk-left">
+                        <span class="h2">
                             <span>Vol.2</span>
                             <span>SOCIAL TRENDS</span>
-                        </h2>
-                    </div>
-                    <div class="bk-back"></div>
+                        </span>
+                    </span>
+                    <span class="bk-back"></span>
 
-                </div>
+                </a>
             </li>
             <li>
-                <div class="bk-book book-3 ">
-                    <div class="bk-front">
-                        <div class="tag">
-                            <div class="icn">
+                <a href="https://drive.google.com/file/d/1hb2BYc-BC37v3PPL_oNJHK-_vaiKrTa1/view?usp=share_link"
+                   target="_blank" class="bk-book book-3 ">
+                    <span class="bk-front">
+                        <span class="tag">
+                            <span class="icn">
                                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M35.0002 0L41.2167 11.7996L52.4999 4.68927L51.9839 18.0161L65.3111 17.5001L58.2004 28.7833L70 35.0002L58.2004 41.2167L65.3111 52.4999L51.9839 51.9839L52.4999 65.3111L41.2167 58.2004L35.0002 70L28.7833 58.2004L17.5001 65.3111L18.0161 51.9839L4.68927 52.4999L11.7996 41.2167L0 35.0002L11.7996 28.7833L4.68927 17.5001L18.0161 18.0161L17.5001 4.68927L28.7833 11.7996L35.0002 0Z"
                                           fill="#EA0029"/>
                                 </svg>
-                            </div>
-                            <div class="txt">
+                            </span>
+                            <span class="txt">
                                 <svg width="36" height="12" viewBox="0 0 36 12" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.51001 12L2.07001 0.825012H3.67501L8.52001 9.10501L7.80001 9.27001L8.98501 0.825012H11.025L9.46501 12H7.86001L3.07501 3.66001L3.73501 3.49501L2.55001 12H0.51001Z"
@@ -989,22 +1043,22 @@
                                     <path d="M22.3341 12L20.8941 0.825012H23.0391L24.0591 10.35H23.4141L27.3291 0.825012H29.3541L30.5691 10.35H29.8491L33.6441 0.825012H35.8641L31.3191 12H28.9641L27.7941 2.73001H28.4541L24.6741 12H22.3341Z"
                                           fill="white"/>
                                 </svg>
-                            </div>
-                        </div>
-                        <div class="bk-cover">
-                        </div>
-                    </div>
+                            </span>
+                        </span>
+                        <span class="bk-cover">
+                        </span>
+                    </span>
 
 
-                    <div class="bk-left">
-                        <h2>
+                    <span class="bk-left">
+                        <span class="h2">
                             <span>Vol.3</span>
                             <span>SOCIAL TRENDS</span>
-                        </h2>
-                    </div>
-                    <div class="bk-back"></div>
+                        </span>
+                    </span>
+                    <span class="bk-back"></span>
 
-                </div>
+                </a>
             </li>
         </ul>
     </div>
@@ -1023,7 +1077,7 @@
                 <div class="slide-up-card fade-mob">
                     <div class="slide-card slide-card-1">
                         <div class="thumb">
-                            <img src="" alt="">
+                            <img src="web_images/slide-1.webp" alt="">
                         </div>
                         <div class="total">
                             <div class="text">Sáng tạo content</div>
@@ -1043,7 +1097,7 @@
                 <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
-                            <img src="" alt="">
+                            <img src="web_images/slide-2.webp" alt="">
                         </div>
                         <div class="total">
                             <div class="text">Media Booking</div>
@@ -1066,7 +1120,7 @@
                 <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
-                            <img src="" alt="">
+                            <img src="web_images/slide-3.webp" alt="">
                         </div>
                         <div class="total">
                             <div class="text">Phát triển thương hiệu
@@ -1089,7 +1143,7 @@
                 <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
-                            <img src="" alt="">
+                            <img src="web_images/slide-4.webp" alt="">
                         </div>
                         <div class="total">
                             <div class="text">Bảo trợ truyền thông</div>
@@ -1112,10 +1166,10 @@
                 <div class="slide-up-card slide-up-tl fade-mob">
                     <div class="slide-card">
                         <div class="thumb">
-                            <img src="" alt="">
+                            <img src="web_images/slide-5.webp" alt="">
                         </div>
                         <div class="total">
-                            <div class="text">Booking KOL</div>
+                            <div class="text">Booking KOLs</div>
                             <div class="des">
                                 <p>Cung cấp giải pháp KOL Marketing chuyên nghiệp và hiệu quả.</p>
                                 <p>Booking quảng cáo với 100+ KOLs/Influencers thuộc nhiều lĩnh vực khác nhau trên đa
@@ -1296,6 +1350,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="https://viettel.com.vn/vi/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/viettel.webp" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://career.vng.com.vn/" class="pn-link" target="_blank">
+                        <img src="web_images/partner/vng.webp" alt="">
+                    </a>
+                </li>
+                <li>
                     <a href="https://doanthanhnien.vn/" class="pn-link" target="_blank">
                         <img src="web_images/partner/doanthanhnien.webp" alt="">
                     </a>
@@ -1406,16 +1470,7 @@
                         <img src="web_images/partner/iq.webp" alt="">
                     </a>
                 </li>
-                <li>
-                    <a href="https://viettel.com.vn/vi/" class="pn-link" target="_blank">
-                        <img src="web_images/partner/viettel.webp" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://career.vng.com.vn/" class="pn-link" target="_blank">
-                        <img src="web_images/partner/vng.webp" alt="">
-                    </a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -1454,7 +1509,7 @@
             </svg>
         </div>
         <div class="info-contact">
-            <div class="heading">Listen to the beat of life</div>
+            <div class="heading">Listen to <br> the beat of life</div>
             <div class="ct-box">
                 <div class="type">Hotline</div>
                 <div class="text">
@@ -1470,7 +1525,7 @@
             <div class="ct-box">
                 <div class="type">Fanpage</div>
                 <div class="text">
-                    <a href="https://www.facebook.com/beatnetwork.official" class="ct-txt" target="_blank">Beat
+                    <a href="https://www.facebook.com/beatnetwork.official" class="ct-txt" target="_blank">BEAT
                         Network</a>
                 </div>
             </div>
@@ -1496,7 +1551,7 @@
             </div>
         </div>
     </div>
-    <div class="beat-wrapper__credit">All rights reserved by Beat Network</div>
+    <div class="beat-wrapper__credit">All rights reserved by BEAT Network</div>
 </div>
 <div class="popup-contact" id="popup-contact">
     <div class="popup-backdrop"></div>
